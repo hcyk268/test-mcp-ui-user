@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -67,7 +67,7 @@
       </div>
       
       <div class="account-avatar" id="avatar-wrap">
-        <img src="assets/why_choose_us.jpg" alt="User Avatar" id="avatar-img" style="filter: brightness(1.1); transform: scale(1.5);">
+        <img src="assets/account_avatar.png" alt="Ảnh đại diện tài khoản" id="avatar-img">
       </div>
     </div>
   </header>
@@ -143,7 +143,7 @@
         
         <!-- Red Search Button (Centered) -->
         <button type="submit" class="btn-booking-search" id="btn-search-tickets">
-          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px;">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="header-icon-inline">
             <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
           </svg>
           <span>Tìm kiếm chuyến bay</span>
@@ -290,7 +290,7 @@
     <!-- Flight Listing Column -->
     <section class="tour-listing-grid-col" id="tour-listing-grid">
       <!-- Grid Header -->
-      <div class="listing-header" id="listing-header-wrap" style="border-bottom: none; margin-bottom: 12px;">
+      <div class="listing-header listing-header--compact" id="listing-header-wrap">
         <h2 class="trains-grid-heading" id="trains-grid-heading">
           Tìm thấy <span class="highlight-red">35</span> chuyến bay từ Hà Nội đến TP. HCM
         </h2>
@@ -439,7 +439,7 @@
           
           <div class="train-card-main-content" id="main-flight-3">
             <div class="train-badge-row" id="badge-flight-3">
-              <span class="train-type-text"><a href="flight-detail.html" style="color: inherit; text-decoration: none;">Vietnam Airlines</a></span>
+              <span class="train-type-text"><a href="flight-detail.html" class="inline-link-reset">Vietnam Airlines</a></span>
               <span class="train-code-heading">VN-201</span>
             </div>
             
@@ -474,9 +474,7 @@
               <span class="train-discount-price">1.250.000₫</span>
             </div>
             
-            <a href="flight-detail.html" style="width: 100%; display: block; text-decoration: none;">
-              <button type="button" class="btn-choose-train" id="btn-choose-flight-3" style="width: 100%;">Chọn chuyến</button>
-            </a>
+            <a href="flight-detail.html" class="btn-choose-train" id="btn-choose-flight-3">Chọn chuyến</a>
             
             <div class="train-seats-warning" id="seats-flight-3">
               <svg viewBox="0 0 20 20" fill="currentColor">
@@ -597,3 +595,4 @@
 
 </body>
 </html>
+

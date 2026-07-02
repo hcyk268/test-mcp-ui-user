@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
@@ -66,13 +66,13 @@
         </button>
       </div>
       
-      <div class="guest-action-wrap" style="display: flex; align-items: center; gap: 16px; margin-left: 16px;">
-        <button type="button" aria-label="Thông báo" id="btn-icon-notifications" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;">
-          <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; color: #1b1c1c; fill: none; stroke: currentColor; stroke-width: 2;">
+      <div class="guest-action-wrap">
+        <button type="button" aria-label="Thông báo" id="btn-icon-notifications">
+          <svg viewBox="0 0 24 24">
             <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-        <a href="login.html" class="btn-guest-login" style="background-color: #c8102e; color: #ffffff; text-decoration: none; padding: 8px 24px; border-radius: 8px; font-weight: 700; font-size: 14px; letter-spacing: 0.7px; transition: var(--transition-smooth); display: inline-flex; align-items: center; justify-content: center; height: 39px; box-sizing: border-box;">Đăng nhập</a>
+        <a href="login.html" class="btn-guest-login">Đăng nhập</a>
       </div>
     </div>
   </header>
@@ -153,7 +153,7 @@
         <!-- Red Search Button (Centered) -->
         <button type="submit" class="btn-booking-search" id="btn-search-tickets">
           <!-- Train Icon -->
-          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px;">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="header-icon-inline">
             <path d="M12 2c-4 0-7 2.08-7 6v8c0 2.42 1.72 4.44 4 4.9V22h2v-1h2v1h2v-1.1c2.28-.46 4-2.48 4-4.9V8c0-3.92-3-6-7-6zm-3.5 14c-.83 0-1.5-.67-1.5-1.5S7.67 13 8.5 13s1.5.67 1.5 1.5S9.33 16 8.5 16zm7 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H7V7h10v3z"/>
           </svg>
           <span>Tìm kiếm vé tàu</span>
@@ -267,7 +267,7 @@
     <!-- Ticket Listing Grid Column -->
     <section class="tour-listing-grid-col" id="tour-listing-grid">
       <!-- Grid Header -->
-      <div class="listing-header" id="listing-header-wrap" style="border-bottom: none; margin-bottom: 12px;">
+      <div class="listing-header listing-header--compact" id="listing-header-wrap">
         <h2 class="trains-grid-heading" id="trains-grid-heading">
           Tìm thấy <span class="highlight-red">35</span> chuyến tàu từ Hà Nội đến TP. HCM
         </h2>
@@ -285,7 +285,7 @@
             <!-- Train Badge Row -->
             <div class="train-badge-row" id="badge-train-1">
               <span class="train-type-text">Tàu nhanh</span>
-              <a href="train-detail-guest.html" class="train-code-heading" style="text-decoration: none; color: inherit;">SE1</a>
+              <a href="train-detail-guest.html" class="train-code-heading">SE1</a>
             </div>
             
             <!-- Schedule Timings Row -->
@@ -304,7 +304,7 @@
               </div>
               
               <div class="schedule-station end-station" id="end-train-1">
-                <span class="station-time">11:00 <small style="color: #9e001f; font-size: 10px; font-weight: bold;">(+1)</small></span>
+                <span class="station-time">11:00 <small class="plus-day">(+1)</small></span>
                 <span class="station-name">Ga Huế</span>
               </div>
             </div>
@@ -319,7 +319,7 @@
             </div>
             
             <!-- Action CTA -->
-            <a href="train-detail-guest.html" class="btn-choose-train" id="btn-choose-train-1" style="display: flex; align-items: center; justify-content: center; text-decoration: none; box-sizing: border-box;">Chọn chuyến</a>
+            <a href="train-detail-guest.html" class="btn-choose-train" id="btn-choose-train-1">Chọn chuyến</a>
             
             <!-- Seat warning indicator -->
             <div class="train-seats-warning" id="seats-train-1">
@@ -410,7 +410,7 @@
               </div>
               
               <div class="schedule-station end-station" id="end-train-3">
-                <span class="station-time">08:00 <small style="color: #9e001f; font-size: 10px; font-weight: bold;">(+1)</small></span>
+                <span class="station-time">08:00 <small class="plus-day">(+1)</small></span>
                 <span class="station-name">Ga Huế</span>
               </div>
             </div>
@@ -548,3 +548,4 @@
 
 </body>
 </html>
+
