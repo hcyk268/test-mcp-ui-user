@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nét Việt Travel | Đăng ký tài khoản</title>
+  <meta name="description" content="Đăng ký tài khoản Nét Việt Travel để lưu chuyến đi, quản lý đặt chỗ và nhận ưu đãi dành riêng cho thành viên.">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="auth-page">
+  <main class="auth-shell auth-shell--scenic">
+    <div class="auth-shell__bg auth-shell__bg--scenic"></div>
+    <section class="auth-shell__layout auth-plain-layout">
+      <img class="auth-plain-brand" src="assets/logo.svg" alt="Nét Việt Travel">
+
+      <div class="auth-plain-content">
+        <h1 class="auth-plain-title">Đăng ký tài khoản</h1>
+        <p class="auth-plain-subtitle">Quý khách vui lòng điền thông tin vào mẫu bên dưới để đăng ký thành viên. Xin chân thành cảm ơn quý khách!</p>
+
+        <form class="auth-plain-form" action="login.html" method="get">
+          <div class="auth-field-group">
+            <label class="auth-label" for="register-name">Họ và tên (*)</label>
+            <div class="auth-input-wrap auth-input-wrap--strong">
+              <input class="auth-input" id="register-name" name="fullName" type="text" placeholder="Ví dụ: Nguyễn Văn A" value="Ví dụ: Nguyễn Văn A">
+            </div>
+          </div>
+
+          <div class="auth-field-group">
+            <label class="auth-label" for="register-email">Địa chỉ Email</label>
+            <div class="auth-input-wrap auth-input-wrap--strong">
+              <span class="auth-input-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="M4 7l8 6 8-6"></path>
+                </svg>
+              </span>
+              <input class="auth-input" id="register-email" name="email" type="email" placeholder="example@gmail.com" value="example@gmail.com">
+            </div>
+          </div>
+
+          <div class="auth-field-group">
+            <label class="auth-label" for="register-password">Mật khẩu</label>
+            <div class="auth-input-wrap auth-input-wrap--strong">
+              <span class="auth-input-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+                  <path d="M8 11V8a4 4 0 118 0v3"></path>
+                </svg>
+              </span>
+              <input class="auth-input" id="register-password" name="password" type="password" placeholder="••••••••" value="12345678">
+              <span class="auth-input-toggle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="auth-field-group">
+            <label class="auth-label" for="register-password-confirm">Nhập lại mật khẩu</label>
+            <div class="auth-input-wrap auth-input-wrap--strong">
+              <span class="auth-input-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="5" y="11" width="14" height="10" rx="2"></rect>
+                  <path d="M8 11V8a4 4 0 118 0v3"></path>
+                </svg>
+              </span>
+              <input class="auth-input" id="register-password-confirm" name="passwordConfirm" type="password" placeholder="••••••••" value="12345678">
+              <span class="auth-input-toggle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </span>
+            </div>
+          </div>
+
+          <div class="auth-consent">
+            <input id="register-consent" type="checkbox">
+            <label for="register-consent">Tôi đồng ý với <strong>Điều khoản &amp; Chính sách bảo mật</strong> của Nét Việt.</label>
+          </div>
+
+          <div class="auth-plain-actions">
+            <button class="auth-button auth-button--primary" type="submit" id="btn-register-submit">Hoàn tất đăng ký</button>
+            <a class="auth-button auth-button--ghost" href="login.html" id="btn-register-cancel">Huỷ bỏ</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

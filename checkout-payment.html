@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nét Việt Travel | Xác nhận thanh toán</title>
+  <meta name="description" content="Hoàn tất thông tin thanh toán an toàn cho đơn hàng Nét Việt Travel của bạn.">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="checkout-page">
+  <header class="container-custom checkout-topbar checkout-topbar--member">
+    <div class="logo-container">
+      <a href="index.html" id="checkout-payment-logo-link">
+        <img src="assets/logo.svg" alt="Nét Việt Travel Logo">
+      </a>
+    </div>
+
+    <nav aria-label="Điều hướng chính">
+      <a href="index.html" id="checkout-payment-nav-home">Trang chủ</a>
+      <a href="tour.html" id="checkout-payment-nav-tour">Tour</a>
+      <a href="booking.html" id="checkout-payment-nav-booking">Đặt vé</a>
+      <a href="hotel.html" id="checkout-payment-nav-hotel">Khách sạn</a>
+    </nav>
+
+    <div class="header-actions checkout-topbar__member-actions">
+      <div class="header-icons">
+        <a class="checkout-topbar__icon-button" href="#" aria-label="Ngôn ngữ" id="checkout-payment-btn-language">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <a class="checkout-topbar__icon-button" href="#" aria-label="Yêu thích" id="checkout-payment-btn-favorite">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <a class="checkout-topbar__icon-button checkout-topbar__icon-button--active" href="cart.html" aria-label="Giỏ hàng" id="checkout-payment-btn-cart">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 4h2l2.2 10.1A2 2 0 009.2 16h7.9a2 2 0 002-1.6L21 7H7" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="10" cy="20" r="1.5"></circle>
+            <circle cx="18" cy="20" r="1.5"></circle>
+          </svg>
+        </a>
+      </div>
+
+      <a class="account-avatar checkout-topbar__avatar" href="account.html" aria-label="Tài khoản của bạn" id="checkout-payment-avatar-link">
+        <img src="assets/account_avatar.png" alt="Ảnh đại diện tài khoản">
+      </a>
+    </div>
+  </header>
+
+  <main class="checkout-main checkout-main--payment">
+    <section class="container-custom checkout-shell">
+      <ol class="checkout-stepper checkout-stepper--member" aria-label="Tiến trình thanh toán">
+        <li class="checkout-step is-complete">
+          <span class="checkout-step__number">1</span>
+          <span class="checkout-step__label">Kiểm Tra</span>
+        </li>
+        <li class="checkout-step is-complete">
+          <span class="checkout-step__number">2</span>
+          <span class="checkout-step__label">Thông Tin</span>
+        </li>
+        <li class="checkout-step is-active">
+          <span class="checkout-step__number">3</span>
+          <span class="checkout-step__label">Thanh Toán</span>
+        </li>
+      </ol>
+
+      <div class="checkout-page__heading-group">
+        <h1 class="checkout-page__heading checkout-page__heading--member">Xác nhận thanh toán</h1>
+      </div>
+
+      <div class="checkout-layout checkout-layout--payment">
+        <div class="checkout-flow-column">
+          <section class="checkout-card checkout-selection-card" aria-labelledby="checkout-payment-selection-heading">
+            <div class="checkout-card__header">
+              <div class="checkout-card__title-group">
+                <span class="checkout-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 8h14l-1.4 8.4a2 2 0 01-2 1.6H8.4a2 2 0 01-2-1.6L5 8z"></path>
+                    <path d="M9 8a3 3 0 016 0"></path>
+                  </svg>
+                </span>
+                <h2 id="checkout-payment-selection-heading">Lựa chọn của bạn</h2>
+              </div>
+              <span class="checkout-card__badge">1 Mục</span>
+            </div>
+
+            <article class="checkout-cart-item checkout-cart-item--compact">
+              <a class="checkout-item-media" href="tour-detail.html">
+                <img src="assets/checkout_review_halong.png" alt="Du thuyền Hạ Long Heritage">
+              </a>
+
+              <div class="checkout-item-content">
+                <div class="checkout-item-topline">
+                  <div>
+                    <h3>Du thuyền Hạ Long Heritage</h3>
+                    <p>Phòng Suite Ban công • 2 Đêm</p>
+                  </div>
+                  <strong>14.600.000₫</strong>
+                </div>
+
+                <div class="checkout-item-footer">
+                  <span class="checkout-item-date-pill">
+                    <svg viewBox="0 0 24 24">
+                      <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+                      <path d="M8 3v4M16 3v4M4 10h16"></path>
+                    </svg>
+                    12 Th10 - 14 Th10, 2024
+                  </span>
+
+                  <div class="checkout-item-actions">
+                    <a href="tour-detail.html" id="checkout-payment-edit-item">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M3 17l4 4 14-14-4-4L3 17z"></path>
+                        <path d="M14 6l4 4"></path>
+                      </svg>
+                      Chỉnh sửa
+                    </a>
+                    <a class="is-muted" href="#" id="checkout-payment-delete-item">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 7h14"></path>
+                        <path d="M9 7V5h6v2"></path>
+                        <path d="M8 10v8"></path>
+                        <path d="M16 10v8"></path>
+                        <path d="M6 7l1 13h10l1-13"></path>
+                      </svg>
+                      Xóa
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <section class="checkout-card checkout-form-card" aria-labelledby="checkout-payment-contact-heading">
+            <div class="checkout-card__title-group">
+              <span class="checkout-card__icon checkout-card__icon--filled" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="8" r="4"></circle>
+                  <path d="M4 20a8 8 0 0116 0"></path>
+                </svg>
+              </span>
+              <h2 id="checkout-payment-contact-heading">Thông tin liên hệ</h2>
+            </div>
+
+            <div class="checkout-form-grid">
+              <div class="checkout-field">
+                <span>Họ và Tên</span>
+                <div class="checkout-input checkout-input--readonly">Nguyễn Văn A</div>
+              </div>
+
+              <div class="checkout-field">
+                <span>Địa chỉ Email</span>
+                <div class="checkout-input checkout-input--readonly">Example@gmail.com</div>
+              </div>
+
+              <div class="checkout-field checkout-field--wide">
+                <span>Số điện thoại</span>
+                <div class="checkout-split-input">
+                  <span class="checkout-split-input__prefix">+84</span>
+                  <span class="checkout-split-input__value">090 123 4567</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="checkout-card checkout-form-card" aria-labelledby="checkout-payment-method-heading">
+            <div class="checkout-card__title-group">
+              <span class="checkout-card__icon checkout-card__icon--filled" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="M3 10h18"></path>
+                </svg>
+              </span>
+              <h2 id="checkout-payment-method-heading">Phương thức thanh toán</h2>
+            </div>
+
+            <div class="checkout-payment-methods">
+              <button class="checkout-method is-selected" type="button" id="checkout-payment-method-card">
+                <span class="checkout-method__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="6" width="18" height="12" rx="2"></rect>
+                    <path d="M3 10h18"></path>
+                  </svg>
+                </span>
+                <span class="checkout-method__text">
+                  <strong>Thẻ Tín dụng / Ghi nợ</strong>
+                  <small>Visa, Mastercard, JCB</small>
+                </span>
+                <span class="checkout-method__check" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M8.5 12.5l2.3 2.3 4.7-5"></path>
+                  </svg>
+                </span>
+              </button>
+
+              <button class="checkout-method" type="button" id="checkout-payment-method-wallet">
+                <span class="checkout-method__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"></path>
+                    <path d="M15 14h2v2h-2zM18 14h2v6h-2zM15 17h2v3h-2z"></path>
+                  </svg>
+                </span>
+                <span class="checkout-method__text">
+                  <strong>Ví điện tử / MoMo / VNPay</strong>
+                  <small>Nhanh chóng &amp; An toàn</small>
+                </span>
+              </button>
+            </div>
+
+            <div class="checkout-card-input-grid checkout-card-input-grid--single">
+              <label class="checkout-field checkout-field--wide">
+                <span>Số thẻ</span>
+                <div class="checkout-input checkout-input--icon">
+                  <input type="text" value="0000 0000 0000 0000">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="5" y="10" width="14" height="10" rx="2"></rect>
+                    <path d="M8 10V7a4 4 0 118 0v3"></path>
+                  </svg>
+                </div>
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <aside class="checkout-sidebar">
+          <section class="checkout-card checkout-summary-card checkout-summary-card--detail checkout-summary-card--member">
+            <div class="checkout-summary-card__accent"></div>
+            <div class="checkout-summary-card__detail">
+              <h2>Chi tiết đơn hàng</h2>
+
+              <div class="checkout-summary-list">
+                <div class="checkout-summary-list__row">
+                  <span>Tạm tính</span>
+                  <strong>14.600.000₫</strong>
+                </div>
+                <div class="checkout-summary-list__row">
+                  <span>Thuế &amp; Phí</span>
+                  <strong>1.250.000₫</strong>
+                </div>
+                <div class="checkout-summary-list__row checkout-summary-list__row--discount">
+                  <span>Giảm giá</span>
+                  <strong>-300.000₫</strong>
+                </div>
+              </div>
+
+              <div class="checkout-summary-total">
+                <div>
+                  <span>Tổng cộng</span>
+                </div>
+                <div class="checkout-summary-total__amount">
+                  <strong>15.550.000₫</strong>
+                  <small>Đã bao gồm VAT</small>
+                </div>
+              </div>
+
+              <div class="checkout-summary-card__promo">
+                <span class="checkout-promo-label checkout-promo-label--small">MÃ GIẢM GIÁ</span>
+                <form class="checkout-promo-form">
+                  <input class="checkout-promo-input checkout-promo-input--pill" type="text" value="Nhập mã ưu đãi" aria-label="Nhập mã ưu đãi">
+                  <button class="checkout-promo-button checkout-promo-button--gold" type="button" id="checkout-payment-btn-apply">Áp dụng</button>
+                </form>
+              </div>
+
+              <a class="checkout-pill-button checkout-pill-button--primary checkout-summary-card__primary" href="account.html" id="checkout-payment-btn-confirm">
+                Xác nhận Thanh toán
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3l7 3v5c0 4.5-2.8 8.4-7 10-4.2-1.6-7-5.5-7-10V6l7-3z"></path>
+                  <path d="M9.5 12.5l1.8 1.8 3.7-4"></path>
+                </svg>
+              </a>
+
+              <p class="checkout-summary-card__secure">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 3l7 3v5c0 4.5-2.8 8.4-7 10-4.2-1.6-7-5.5-7-10V6l7-3z"></path>
+                  <path d="M9.5 12.5l1.8 1.8 3.7-4"></path>
+                </svg>
+                MÃ HÓA SSL &amp; THANH TOÁN AN TOÀN
+              </p>
+            </div>
+          </section>
+
+          <div class="checkout-trust-stack">
+            <article class="checkout-trust-card checkout-trust-card--gold">
+              <span class="checkout-trust-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="10" r="6"></circle>
+                  <path d="M9 21l3-2 3 2v-6"></path>
+                  <path d="M10 10l1.3 1.3L14 8.6"></path>
+                </svg>
+              </span>
+              <div>
+                <h3>Đảm bảo giá tốt nhất</h3>
+                <p>Hoàn tiền chênh lệch nếu thấy giá rẻ hơn.</p>
+              </div>
+            </article>
+
+            <article class="checkout-trust-card checkout-trust-card--red">
+              <span class="checkout-trust-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 12a8 8 0 1116 0v4"></path>
+                  <path d="M5 16h3v4H5zM16 16h3v4h-3z"></path>
+                  <path d="M12 4v4"></path>
+                </svg>
+              </span>
+              <div>
+                <h3>Hỗ trợ 24/7</h3>
+                <p>Đội ngũ hỗ trợ tận tâm luôn sẵn sàng.</p>
+              </div>
+            </article>
+          </div>
+
+          <a class="checkout-pill-button checkout-pill-button--outline" href="checkout-info.html" id="checkout-payment-btn-back">Quay lại</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer">
+    <div class="container-custom footer-top">
+      <div class="footer-col">
+        <div class="footer-logo-container">
+          <img src="assets/logo_white.svg" alt="Nét Việt Travel Logo White">
+        </div>
+        <p class="footer-desc">Hành trình từ tâm, nâng tầm trải nghiệm Việt. Khám phá vẻ đẹp bất tận của mảnh đất chữ S cùng chúng tôi.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24">
+              <path d="M14 3c.4 2 1.6 3.8 3.6 4.7 1 .4 2.1.6 3.4.6v3.5c-1.7 0-3.3-.4-4.8-1.1v5.6c0 3.7-3 6.7-6.7 6.7S3.8 20 3.8 16.3 6.8 9.6 10.5 9.6c.4 0 .8 0 1.2.1v3.7a3 3 0 00-1.2-.2 3.1 3.1 0 103.1 3.1V3H14z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>VỀ CÔNG TY</h4>
+        <ul class="footer-links-list">
+          <li><a href="#">Câu chuyện thương hiệu</a></li>
+          <li><a href="#">Tin tức &amp; Sự kiện</a></li>
+          <li><a href="#">Cơ hội nghề nghiệp</a></li>
+          <li><a href="#">Đối tác chiến lược</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+        <ul class="footer-links-list">
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Hotline 24/7</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>LIÊN HỆ</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Trụ sở: Nét Việt, Q1, TP. Hồ Chí Minh</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
+            <span>hellonetviet@gmail.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+            </svg>
+            <span class="phone-number">1990 888 999</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-custom footer-bottom">
+      <p>© 2026 Nét Việt.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Chính sách</a>
+        <a href="#">Cài đặt</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

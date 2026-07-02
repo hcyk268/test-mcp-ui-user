@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nét Việt Travel | Thông tin đơn hàng</title>
+  <meta name="description" content="Điền thông tin liên hệ và các yêu cầu đặc biệt trước khi tiếp tục đến bước thanh toán.">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body class="checkout-page checkout-page--info">
+  <header class="container-custom checkout-topbar">
+    <div class="logo-container">
+      <a href="index-guest.html">
+        <img src="assets/logo.svg" alt="Nét Việt Travel Logo">
+      </a>
+    </div>
+
+    <nav aria-label="Điều hướng chính">
+      <a href="index-guest.html">Trang chủ</a>
+      <a href="tour-guest.html">Tour</a>
+      <a href="booking-guest.html">Đặt vé</a>
+      <a href="hotel-guest.html">Khách sạn</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="header-icons">
+        <a class="checkout-topbar__icon-button" href="#" aria-label="Ngôn ngữ">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2a10 10 0 100 20 10 10 0 000-20zM2 12h20M12 2a15 15 0 010 20M12 2a15 15 0 000 20" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <a class="checkout-topbar__icon-button" href="#" aria-label="Yêu thích">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <a class="checkout-topbar__icon-button checkout-topbar__icon-button--active" href="cart-guest.html" aria-label="Giỏ hàng">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 4h2l2.2 10.1A2 2 0 009.2 16h7.9a2 2 0 002-1.6L21 7H7" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="10" cy="20" r="1.5"></circle>
+            <circle cx="18" cy="20" r="1.5"></circle>
+          </svg>
+        </a>
+      </div>
+
+      <div class="checkout-topbar__guest-actions">
+        <a class="checkout-topbar__account" href="login.html" aria-label="Tài khoản">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20a8 8 0 0116 0"></path>
+          </svg>
+        </a>
+        <a class="checkout-topbar__login" href="login.html">Đăng nhập</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="checkout-main checkout-main--info">
+    <section class="container-custom checkout-shell">
+      <ol class="checkout-stepper" aria-label="Tiến trình thanh toán">
+        <li class="checkout-step is-complete">
+          <span class="checkout-step__number">1</span>
+          <span class="checkout-step__label">Kiểm Tra</span>
+        </li>
+        <li class="checkout-step is-active">
+          <span class="checkout-step__number">2</span>
+          <span class="checkout-step__label">Thông Tin</span>
+        </li>
+        <li class="checkout-step">
+          <span class="checkout-step__number">3</span>
+          <span class="checkout-step__label">Thanh Toán</span>
+        </li>
+      </ol>
+
+      <div class="checkout-layout checkout-layout--info">
+        <div class="checkout-flow-column">
+          <section class="checkout-card checkout-form-card checkout-form-card--gold" aria-labelledby="checkout-contact-heading">
+            <div class="checkout-card__title-group">
+              <span class="checkout-card__icon checkout-card__icon--filled" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="8" r="4"></circle>
+                  <path d="M4 20a8 8 0 0116 0"></path>
+                </svg>
+              </span>
+              <h1 id="checkout-contact-heading" class="checkout-form-card__heading">Thông Tin Liên Hệ</h1>
+            </div>
+
+            <form class="checkout-form-grid" action="checkout-payment-guest.html" method="get">
+              <label class="checkout-field">
+                <span>Họ và Tên *</span>
+                <input class="checkout-input" type="text" name="fullname" value="Nguyễn Văn A">
+              </label>
+
+              <label class="checkout-field">
+                <span>Số Điện Thoại *</span>
+                <input class="checkout-input" type="text" name="phone" value="090 123 4567">
+              </label>
+
+              <label class="checkout-field checkout-field--wide">
+                <span>Email *</span>
+                <input class="checkout-input" type="email" name="email" value="example@gmail.com">
+              </label>
+            </form>
+          </section>
+
+          <section class="checkout-card checkout-form-card checkout-form-card--red" aria-labelledby="checkout-request-heading">
+            <div class="checkout-card__title-group">
+              <span class="checkout-card__icon checkout-card__icon--filled" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 16h18"></path>
+                  <path d="M5 12l4 4 10-10"></path>
+                </svg>
+              </span>
+              <h2 id="checkout-request-heading" class="checkout-form-card__heading">Yêu Cầu Đặc Biệt</h2>
+            </div>
+
+            <div class="checkout-field checkout-field--wide">
+              <span>Hành lý ký gửi</span>
+              <div class="checkout-select-stack">
+                <button class="checkout-selectlike" type="button">
+                  <span>Chiều đi</span>
+                  <strong>Thêm hành lý</strong>
+                </button>
+                <button class="checkout-selectlike" type="button">
+                  <span>Chiều về</span>
+                  <strong>Thêm hành lý</strong>
+                </button>
+              </div>
+            </div>
+
+            <label class="checkout-field checkout-field--wide">
+              <textarea class="checkout-textarea" name="request" rows="5" placeholder="Ghi chú về dị ứng thực phẩm, yêu cầu về chỗ ngồi,..."></textarea>
+            </label>
+
+            <label class="checkout-consent">
+              <input type="checkbox" name="consent">
+              <span></span>
+              <em>Tôi đồng ý với <strong>Điều khoản &amp; Chính sách bảo mật</strong> của Nét Việt.</em>
+            </label>
+          </section>
+
+          <div class="checkout-mini-trusts" aria-label="Cam kết dịch vụ">
+            <div class="checkout-mini-trust">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3l7 3v5c0 4.5-2.8 8.4-7 10-4.2-1.6-7-5.5-7-10V6l7-3z"></path>
+                <path d="M9.5 12.5l1.8 1.8 3.7-4"></path>
+              </svg>
+              SSL SECURE
+            </div>
+            <div class="checkout-mini-trust">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8"></circle>
+                <path d="M12 7v5l3 3"></path>
+              </svg>
+              BEST PRICE GUARANTEE
+            </div>
+            <div class="checkout-mini-trust">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 12a8 8 0 1116 0v4"></path>
+                <path d="M5 16h3v4H5zM16 16h3v4h-3z"></path>
+              </svg>
+              24 / 7 SUPPORT
+            </div>
+          </div>
+        </div>
+
+        <aside class="checkout-sidebar">
+          <section class="checkout-card checkout-hero-summary">
+            <div class="checkout-hero-summary__visual">
+              <img src="assets/checkout_halong_hero.png" alt="Du thuyền Hạ Long">
+              <div class="checkout-hero-summary__overlay"></div>
+              <span class="checkout-hero-summary__tag">DI SẢN THẾ GIỚI</span>
+            </div>
+
+            <div class="checkout-hero-summary__body">
+              <div class="checkout-hero-summary__meta">
+                <div>
+                  <svg viewBox="0 0 24 24">
+                    <rect x="4" y="5" width="16" height="15" rx="2"></rect>
+                    <path d="M8 3v4M16 3v4M4 10h16"></path>
+                  </svg>
+                  <span>25 Th11 - 27 Th11, 2024</span>
+                </div>
+                <strong>3 Ngày 2 Đêm</strong>
+              </div>
+
+              <div class="checkout-hero-summary__meta">
+                <div>
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 20a8 8 0 0116 0"></path>
+                  </svg>
+                  <span>Hành khách</span>
+                </div>
+                <strong>02 Người lớn</strong>
+              </div>
+
+              <div class="checkout-hero-summary__prices">
+                <div>
+                  <span>Giá tour (x2)</span>
+                  <strong>14.600.000₫</strong>
+                </div>
+                <div>
+                  <span>Thuế &amp; Phí dịch vụ</span>
+                  <strong>1.250.000₫</strong>
+                </div>
+              </div>
+
+              <div class="checkout-hero-summary__total">
+                <div>
+                  <span>Tổng cộng</span>
+                </div>
+                <div>
+                  <strong>15.850.000₫</strong>
+                  <small>Đã bao gồm VAT</small>
+                </div>
+              </div>
+
+              <a class="checkout-pill-button checkout-pill-button--primary" href="checkout-payment-guest.html">Tiếp Tục Thanh Toán</a>
+
+              <p class="checkout-hero-summary__note">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 8v5"></path>
+                  <circle cx="12" cy="16.5" r="1"></circle>
+                </svg>
+                Hoàn hủy miễn phí 48 giờ trước khởi hành
+              </p>
+            </div>
+          </section>
+
+          <a class="checkout-pill-button checkout-pill-button--outline" href="checkout-review-guest.html">Quay lại</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer">
+    <div class="container-custom footer-top">
+      <div class="footer-col">
+        <div class="footer-logo-container">
+          <img src="assets/logo_white.svg" alt="Nét Việt Travel Logo White">
+        </div>
+        <p class="footer-desc">Hành trình từ tâm, nâng tầm trải nghiệm Việt. Khám phá vẻ đẹp bất tận của mảnh đất chữ S cùng chúng tôi.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24">
+              <path d="M14 3c.4 2 1.6 3.8 3.6 4.7 1 .4 2.1.6 3.4.6v3.5c-1.7 0-3.3-.4-4.8-1.1v5.6c0 3.7-3 6.7-6.7 6.7S3.8 20 3.8 16.3 6.8 9.6 10.5 9.6c.4 0 .8 0 1.2.1v3.7a3 3 0 00-1.2-.2 3.1 3.1 0 103.1 3.1V3H14z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>VỀ CÔNG TY</h4>
+        <ul class="footer-links-list">
+          <li><a href="#">Câu chuyện thương hiệu</a></li>
+          <li><a href="#">Tin tức &amp; Sự kiện</a></li>
+          <li><a href="#">Cơ hội nghề nghiệp</a></li>
+          <li><a href="#">Đối tác chiến lược</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+        <ul class="footer-links-list">
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Hotline 24/7</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>LIÊN HỆ</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Trụ sở: Nét Việt, Q1, TP. Hồ Chí Minh</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
+            <span>hellonetviet@gmail.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+            </svg>
+            <span class="phone-number">1990 888 999</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-custom footer-bottom">
+      <p>© 2026 Nét Việt.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Chính sách</a>
+        <a href="#">Cài đặt</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

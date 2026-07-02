@@ -35,6 +35,40 @@ Chuyển đổi chính xác 100% từ một link frame Figma thành file HTML/CS
   - **`itemSpacing`**: Gap giữa các item trong auto-layout.
   - **`paddingLeft/Right/Top/Bottom`**: Padding của frame.
 
+### 1.3.1. Bắt buộc phân tích tới node/layer cực nhỏ
+- **Không dừng ở mức frame lớn hoặc component lớn**. Phải tiếp tục drill-down cho đến khi xác định rõ từng phần tử nhỏ:
+  - Background nền riêng.
+  - Ảnh riêng (`image fill`, `RECTANGLE` có ảnh, `INSTANCE` chứa ảnh).
+  - Text riêng.
+  - Icon/vector riêng.
+  - Shadow/blur/gradient riêng.
+  - Divider, badge, chip, stroke, overlay riêng.
+- Với mọi khu vực quan trọng của UI, phải trả lời được:
+  1. **Đây là ảnh thật hay chỉ là shape/vector?**
+  2. **Đây là text thật hay text đã nằm chết trong ảnh?**
+  3. **Đây là icon riêng hay là một phần của ảnh export?**
+  4. **Đây có phải decorative layer có thể dựng bằng CSS thay vì export bitmap không?**
+- Nếu một node cha chứa nhiều loại layer trộn lẫn, phải bóc tiếp children cho đến khi có thể map từng phần sang HTML/CSS riêng biệt.
+
+### 1.3.2. Quy tắc map node → implementation
+- Mỗi node nhỏ phải được quyết định theo một trong 4 hướng:
+  1. **HTML text thật**.
+  2. **SVG/vector thật**.
+  3. **CSS shape/effect**.
+  4. **Bitmap asset riêng lẻ**.
+- **Không được dùng một ảnh export lớn để “ôm” luôn text, icon, badge, overlay, hoặc nhiều card con**, trừ khi chính thiết kế gốc xác nhận đó là một ảnh duy nhất không thể tách.
+- Nếu export asset, phải export ở **mức node nhỏ nhất hợp lý**, ví dụ:
+  - 1 card ảnh riêng.
+  - 1 ảnh thumbnail riêng.
+  - 1 icon SVG riêng.
+  - 1 texture/background layer riêng.
+- Trước khi code, nên lập mapping ngắn theo kiểu:
+  - `node A` → background CSS.
+  - `node B` → `<img>`.
+  - `node C` → `<h2>`.
+  - `node D` → inline SVG.
+  - `node E` → shadow bằng CSS.
+
 ### 1.4. Quét nhanh tất cả text nodes
 - Sử dụng `scan_text_nodes` để lấy toàn bộ nội dung text trong frame.
 - Đảm bảo không bỏ sót bất kỳ text nào khi dựng HTML.
@@ -181,6 +215,22 @@ Chuyển đổi chính xác 100% từ một link frame Figma thành file HTML/CS
   2. Đặt trong thư mục `assets/`.
   3. Set `object-fit: cover` để ảnh luôn fill đúng container.
 - Ảnh cần `alt` text mô tả nội dung.
+- **Chỉ export đúng phần ảnh cần thiết**, không export cả cụm UI nếu trong đó còn chứa text, icon, badge, hoặc nhiều layer có thể dựng được bằng HTML/CSS.
+- Ví dụ đúng:
+  - Export riêng ảnh card Hạ Long.
+  - Export riêng ảnh card Hội An.
+  - Export riêng ảnh card Sa Pa.
+- Ví dụ sai:
+  - Export nguyên mảng hero/trái/phải mà trong ảnh đã dính luôn text, icon, gradient overlay và nhiều card con.
+
+### 5.1.1. Quy tắc “node nhỏ nhất hợp lý”
+- Trước khi export bất kỳ bitmap nào, phải hỏi:
+  - Có thể dựng phần này bằng CSS không?
+  - Có thể giữ text ở HTML không?
+  - Có thể giữ icon ở SVG không?
+  - Có thể tách card/image con riêng không?
+- Nếu câu trả lời là “có”, **phải tách** thay vì export cả khối.
+- Mục tiêu là asset export chỉ chứa **pixel content thực sự cần rasterize**, không chứa semantic content.
 
 ### 5.2. SVG Icons
 - Lấy SVG path data từ Figma node inspection.
@@ -218,6 +268,16 @@ Chuyển đổi chính xác 100% từ một link frame Figma thành file HTML/CS
   4. **Colors** — kiểm tra hex code chính xác.
   5. **Shadow** — thường bị thiếu hoặc sai opacity.
   6. **Text content** — copy chính xác, không viết tắt.
+  7. **Sai phương pháp dựng** — nếu browser “giống ảnh” nhưng đang dùng ảnh ghép chứa cả text/icon/UI thì vẫn xem là **chưa đạt**.
+
+### 6.2.1. Kiểm tra đúng phương pháp, không chỉ đúng hình
+- Ngoài so sánh screenshot, phải kiểm tra lại DOM/CSS để xác nhận:
+  - Text trong thiết kế đang là text HTML thật.
+  - Icon đang là SVG/vector thật hoặc CSS shape.
+  - Ảnh chỉ là ảnh, không gói chung text và UI.
+  - Background, overlay, blur, shadow đã được dựng tách lớp hợp lý.
+- Một màn hình nhìn giống Figma nhưng được làm bằng “ảnh chụp nguyên cụm” vẫn bị coi là **sai quy trình**.
+- **Pixel-perfect không chỉ là giống bằng mắt, mà còn phải đúng cấu trúc layer**.
 
 > **Tip**: Tạo artifact markdown với cả 2 ảnh embedded để user dễ so sánh trực quan.
 
@@ -302,6 +362,24 @@ Step 15: Lặp lại Step 12-14 cho đến khi pixel-perfect
 ### 8.5. Auto-Layout vs Absolute Position
 - Figma có thể mix auto-layout và absolute positioning.
 - **Cách tránh**: Ưu tiên dùng Flexbox/Grid. Chỉ dùng `position: absolute` cho overlays, badges, floating elements.
+
+### 8.6. Export Cả Cụm UI Thành Một Ảnh ⚠️
+> **Đây là lỗi quy trình nghiêm trọng, dù kết quả nhìn có vẻ giống Figma.**
+
+- Sai điển hình:
+  - Export nguyên hero visual đã chứa sẵn text + icon + nhiều card.
+  - Export nguyên sidebar/card lớn thay vì tách từng ảnh con.
+  - Export cả block auth/dashboard chỉ vì “nhanh hơn”.
+- Hậu quả:
+  - Mất semantic HTML.
+  - Không responsive đúng.
+  - Không chỉnh pixel-level từng thành phần được.
+  - DOM không phản ánh đúng thiết kế Figma.
+- **Cách tránh**:
+  1. Luôn phân tích children của node lớn.
+  2. Chỉ export asset ở node nhỏ nhất hợp lý.
+  3. Giữ text/icon/badge/overlay ở HTML/CSS/SVG bất cứ khi nào có thể.
+  4. Review lại từng asset export để chắc chắn nó không “dính” quá nhiều layer khác nhau.
 
 ---
 
