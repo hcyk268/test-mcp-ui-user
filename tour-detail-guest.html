@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khám phá Vịnh Hạ Long - Du thuyền Signature 5 sao - Nét Việt Travel</title>
+  <meta name="description" content="Trải nghiệm kỳ nghỉ dưỡng xa hoa 2 ngày 1 đêm trên Vịnh Hạ Long cùng Du thuyền Signature 5 sao từ Nét Việt Travel. Đặt vé ngay hôm nay!">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 1. HEADER SECTION -->
+  <header class="container-custom" id="site-header">
+    <div class="logo-container" id="logo-wrap">
+      <a href="index-guest.html" id="logo-link">
+        <img src="assets/logo.svg" alt="Nét Việt Travel Logo" id="logo-img">
+      </a>
+    </div>
+    
+    <nav id="main-nav">
+      <a href="index-guest.html" id="nav-home">Trang chủ</a>
+      <a href="tour-guest.html" class="active" id="nav-tours">Tour</a>
+      <div class="nav-dropdown-item" id="nav-dropdown-booking">
+        <a href="booking-guest.html" id="nav-booking">Đặt vé</a>
+        <div class="booking-submenu" id="booking-dropdown-menu">
+          <a href="flight-guest.html" class="submenu-item" id="sub-flight">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+            <span>Vé máy bay</span>
+          </a>
+          <div class="submenu-separator"></div>
+          <a href="booking-guest.html" class="submenu-item" id="sub-train">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2c-4 0-7 2.08-7 6v8c0 2.42 1.72 4.44 4 4.9V22h2v-1h2v1h2v-1.1c2.28-.46 4-2.48 4-4.9V8c0-3.92-3-6-7-6zm-3.5 14c-.83 0-1.5-.67-1.5-1.5S7.67 13 8.5 13s1.5.67 1.5 1.5S9.33 16 8.5 16zm7 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H7V7h10v3z"/>
+            </svg>
+            <span>Vé tàu</span>
+          </a>
+        </div>
+      </div>
+      <a href="hotel-guest.html" id="nav-hotels">Khách sạn</a>
+    </nav>
+    
+    <div class="header-actions" id="header-actions-wrap">
+      <div class="header-icons" id="header-icons-wrap">
+        <button type="button" aria-label="Tìm kiếm" id="btn-icon-search">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Yêu thích" id="btn-icon-bookmarks">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Giỏ hàng" id="btn-icon-cart">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="guest-action-wrap" style="display: flex; align-items: center; gap: 16px; margin-left: 16px;">
+        <button type="button" aria-label="Thông báo" id="btn-icon-notifications" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;">
+          <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; color: #1b1c1c; fill: none; stroke: currentColor; stroke-width: 2;">
+            <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <a href="login.html" class="btn-guest-login" style="background-color: #c8102e; color: #ffffff; text-decoration: none; padding: 8px 24px; border-radius: 8px; font-weight: 700; font-size: 14px; letter-spacing: 0.7px; transition: var(--transition-smooth); display: inline-flex; align-items: center; justify-content: center; height: 39px; box-sizing: border-box;">Đăng nhập</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. MAIN CONTENT LAYOUT -->
+  <main class="container-custom tour-detail-layout" id="main-detail-layout">
+    
+    <!-- Breadcrumb section -->
+    <div class="detail-breadcrumb" id="detail-breadcrumb">
+      <a href="index-guest.html">Trang chủ</a>
+      <span class="separator">
+        <svg viewBox="0 0 8 12">
+          <path d="M2 2l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2"/>
+        </svg>
+      </span>
+      <a href="tour-guest.html">Danh sách Tour</a>
+      <span class="separator">
+        <svg viewBox="0 0 8 12">
+          <path d="M2 2l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke-width="2"/>
+        </svg>
+      </span>
+      <span class="current">Vịnh Hạ Long</span>
+    </div>
+
+    <!-- Header Section (Title & Share/Bookmarks) -->
+    <div class="detail-header-section" id="detail-header-section">
+      <div class="header-main-info">
+        <h1>Khám phá Vịnh Hạ Long - Du thuyền Signature 5 sao</h1>
+        <div class="header-meta-row">
+          <div class="meta-left-group">
+            <div class="rating-info">
+              <svg class="icon-star" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+              <span class="rating-number">4.8</span>
+              <span class="rating-count">(128 đánh giá)</span>
+            </div>
+            <span class="bullet-sep">•</span>
+            <div class="location-info">
+              <svg class="icon-location" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Vịnh Hạ Long, Quảng Ninh</span>
+            </div>
+          </div>
+          
+          <div class="header-action-buttons">
+            <button type="button" class="btn-header-action" aria-label="Chia sẻ" id="btn-share">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <button type="button" class="btn-header-action" aria-label="Yêu thích" id="btn-wishlist">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Gallery (Bento Grid Style) -->
+    <div class="detail-gallery-bento" id="detail-gallery">
+      <div class="gallery-large-col">
+        <img src="assets/gallery_1.png" alt="Khám phá Vịnh Hạ Long">
+      </div>
+      <div class="gallery-small-grid">
+        <div class="gallery-small-item">
+          <img src="assets/gallery_2.png" alt="Du thuyền Signature">
+        </div>
+        <div class="gallery-small-item">
+          <img src="assets/gallery_3.png" alt="Cabin sang trọng">
+        </div>
+        <div class="gallery-small-item">
+          <img src="assets/gallery_4.png" alt="Hoạt động chèo thuyền Kayak">
+        </div>
+        <div class="gallery-small-item has-overlay">
+          <img src="assets/gallery_5.png" alt="Ngắm hoàng hôn trên vịnh">
+          <div class="gallery-overlay-text">
+            <span>+12 ảnh</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Columns -->
+    <div class="detail-columns-container">
+      
+      <!-- Left Column: Details -->
+      <section class="detail-left-column">
+        
+        <!-- Quick Info -->
+        <div class="detail-quick-info">
+          <div class="quick-info-item">
+            <div class="info-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+              </svg>
+            </div>
+            <div class="info-text">
+              <span class="info-label">THỜI GIAN</span>
+              <span class="info-value">2 ngày 1 đêm</span>
+            </div>
+          </div>
+          <div class="quick-info-item">
+            <div class="info-icon">
+              <!-- Custom minivan icon matching the transportation style -->
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zM7 16c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12-9H5c-1.1 0-2 .9-2 2v7h2c0-1.66 1.34-3 3-3s3 1.34 3 3h2c0-1.66 1.34-3 3-3s3 1.34 3 3h2v-5c0-2.21-1.79-4-4-4zm-9 4H5V9h5v2zm7 0h-5V9h5v2z"/>
+              </svg>
+            </div>
+            <div class="info-text">
+              <span class="info-label">PHƯƠNG TIỆN</span>
+              <span class="info-value">Xe Limousine</span>
+            </div>
+          </div>
+          <div class="quick-info-item">
+            <div class="info-icon">
+              <!-- Ship / Cruise Icon -->
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 21c0-1.66-1.34-3-3-3s-3 1.34-3 3h2c0-.55.45-1 1-1s1 .45 1 1h2zm-8 0c0-1.66-1.34-3-3-3s-3 1.34-3 3h2c0-.55.45-1 1-1s1 .45 1 1h2zm-7.6-5.59L2.5 13l2.84-2.83C5.9 9.61 6.7 9.24 7.54 9.1L20 7v3.24L7.54 12.3c-.28.05-.54.18-.74.37L4.4 15.41z"/>
+              </svg>
+            </div>
+            <div class="info-text">
+              <span class="info-label">LOẠI TOUR</span>
+              <span class="info-value">Tour ghép cao cấp</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Itinerary -->
+        <div class="detail-itinerary-section">
+          <h2 class="section-heading-2">
+            <span class="heading-icon">
+              <!-- Red List Icon -->
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/>
+              </svg>
+            </span>
+            Lịch trình chi tiết
+          </h2>
+          
+          <div class="itinerary-timeline-wrapper">
+            <div class="timeline-vertical-line"></div>
+            
+            <!-- Day 1 -->
+            <div class="timeline-day-block" id="itinerary-day-1">
+              <div class="day-badge-number">1</div>
+              <div class="day-main-content">
+                <h3>Ngày 1: Hà Nội – Vịnh Hạ Long – Vịnh Bái Tử Long</h3>
+                <p class="day-summary">Khởi hành từ Hà Nội bằng xe Limousine cao cấp. Làm thủ tục lên tàu, thưởng thức bữa trưa đặc sắc và bắt đầu hành trình khám phá những hòn đảo kỳ thú trên vịnh.</p>
+                <ul class="day-schedule-list">
+                  <li>
+                    <span class="schedule-dot"></span>
+                    <span class="schedule-text"><strong>12:30:</strong> Lên du thuyền Signature</span>
+                  </li>
+                  <li>
+                    <span class="schedule-dot"></span>
+                    <span class="schedule-text"><strong>13:00:</strong> Thưởng thức bữa trưa buffet</span>
+                  </li>
+                  <li>
+                    <span class="schedule-dot"></span>
+                    <span class="schedule-text"><strong>15:00:</strong> Chèo Kayak tại khu vực Hang Luồn</span>
+                  </li>
+                  <li>
+                    <span class="schedule-dot"></span>
+                    <span class="schedule-text"><strong>18:00:</strong> Tiệc trà chiều trên Sundeck</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="timeline-day-block" id="itinerary-day-2">
+              <div class="day-badge-number">2</div>
+              <div class="day-main-content">
+                <h3>Ngày 2: Hang Thiên Cảnh Sơn – Vịnh Hạ Long – Hà Nội</h3>
+                <p class="day-summary">Đón bình minh trên biển, tham gia lớp học Thái Cực Quyền. Khám phá hang động kỳ vĩ và tận hưởng những giờ phút thư giãn cuối cùng trước khi về cảng.</p>
+                <ul class="day-schedule-list">
+                  <li>
+                    <span class="schedule-dot"></span>
+                    <span class="schedule-text"><strong>06:30:</strong> Lớp học Tai Chi</span>
+                  </li>
+                  <li>
+                    <span class="schedule-dot"></span>
+                    <span class="schedule-text"><strong>07:30:</strong> Thăm hang Thiên Cảnh Sơn</span>
+                  </li>
+                  <li>
+                    <span class="schedule-dot"></span>
+                    <span class="schedule-text"><strong>10:00:</strong> Bữa trưa sớm (Brunch)</span>
+                  </li>
+                  <li>
+                    <span class="schedule-dot"></span>
+                    <span class="schedule-text"><strong>11:30:</strong> Cập bến, xe đưa về Hà Nội</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Utilities (Inclusion / Exclusion) -->
+        <div class="detail-utilities-section">
+          <!-- Inclusion Card -->
+          <div class="utility-card inclusion-card-wrapper">
+            <h3 class="utility-heading title-inclusion">
+              <span class="utility-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </span>
+              Bao gồm
+            </h3>
+            <ul class="utility-items-list">
+              <li>
+                <svg class="svg-check" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Xe Limousine khứ hồi Hà Nội - Hạ Long</span>
+              </li>
+              <li>
+                <svg class="svg-check" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Cabin hạng sang trên du thuyền 5 sao</span>
+              </li>
+              <li>
+                <svg class="svg-check" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Tất cả bữa ăn theo chương trình</span>
+              </li>
+              <li>
+                <svg class="svg-check" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Vé tham quan các điểm du lịch</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Exclusion Card -->
+          <div class="utility-card exclusion-card-wrapper">
+            <h3 class="utility-heading title-exclusion">
+              <span class="utility-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"/>
+                </svg>
+              </span>
+              Không bao gồm
+            </h3>
+            <ul class="utility-items-list">
+              <li>
+                <svg class="svg-cross" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Đồ uống trong các bữa ăn</span>
+              </li>
+              <li>
+                <svg class="svg-cross" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Chi phí cá nhân, tiền tip</span>
+              </li>
+              <li>
+                <svg class="svg-cross" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+                <span>Thuế VAT</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Customer Reviews -->
+        <div class="detail-reviews-section">
+          <div class="reviews-header-block">
+            <h2>Đánh giá từ khách hàng</h2>
+            <a href="#" class="btn-text-reviews">Xem tất cả 128 đánh giá</a>
+          </div>
+          
+          <div class="review-comment-card">
+            <div class="reviewer-header-row">
+              <div class="reviewer-badge-avatar">NH</div>
+              <div class="reviewer-name-date">
+                <h4>Nguyễn Hoàng</h4>
+                <span>Tháng 10, 2024</span>
+              </div>
+              <div class="reviewer-rating-stars">
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                <svg viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              </div>
+            </div>
+            <p class="reviewer-comment-text">
+              "Một trải nghiệm thực sự đẳng cấp. Du thuyền mới, sạch sẽ, nhân viên phục vụ rất chuyên nghiệp. Đồ ăn ngon và lịch trình rất hợp lý."
+            </p>
+          </div>
+        </div>
+
+      </section>
+      
+      <!-- Right Column: Booking Card -->
+      <aside class="detail-right-column">
+        <div class="booking-sidebar-card">
+          <!-- Pricing display -->
+          <div class="booking-pricing-header">
+            <span class="crossed-price">6.500.000đ</span>
+            <div class="current-price-box">
+              <span class="actual-price">4.850.000đ</span>
+              <span class="per-unit">/ khách</span>
+            </div>
+          </div>
+
+          <form action="#" method="POST" class="booking-action-form" onsubmit="event.preventDefault();">
+            <!-- Departure Date -->
+            <div class="booking-form-item">
+              <label>NGÀY KHỞI HÀNH</label>
+              <div class="booking-field-input date-input-wrap">
+                <input type="text" value="15/11/2024" readonly>
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Pax Selectors Grid -->
+            <div class="booking-pax-grid">
+              <div class="booking-form-item">
+                <label>NGƯỜI LỚN</label>
+                <div class="booking-field-input select-input-wrap">
+                  <select aria-label="Số người lớn">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <svg viewBox="0 0 10 6" class="select-chevron">
+                    <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="booking-form-item">
+                <label>TRẺ EM</label>
+                <div class="booking-field-input select-input-wrap">
+                  <select aria-label="Số trẻ em">
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <svg viewBox="0 0 10 6" class="select-chevron">
+                    <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cost Breakdown -->
+            <div class="booking-breakdown-details">
+              <div class="breakdown-item-row">
+                <span class="label">Người lớn (x2)</span>
+                <span class="value">9.700.000đ</span>
+              </div>
+              <div class="breakdown-item-row">
+                <span class="label">Phí dịch vụ</span>
+                <span class="value val-green">Miễn phí</span>
+              </div>
+              <div class="breakdown-item-row breakdown-total-row">
+                <span class="label-total">Tổng cộng</span>
+                <span class="value-total">9.700.000đ</span>
+              </div>
+            </div>
+
+            <!-- Book now CTA -->
+            <button type="submit" class="btn-booking-submit-card">Đặt ngay</button>
+            
+            <div class="guarantee-message">
+              <!-- Shield Check icon -->
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M2.166 4.9C2.196 3.86 3.054 3 4.096 3h11.808c1.042 0 1.9.86 1.93 1.9C17.97 7.915 17.062 11 10 13c-7.062-2-7.97-5.085-7.834-8.1zM10 5a1 1 0 00-1 1v3a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+              </svg>
+              <span>Giữ chỗ ngay, thanh toán sau</span>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Back Button -->
+        <a href="tour-guest.html" class="btn-back-outline">Quay lại</a>
+      </aside>
+
+    </div>
+
+    <!-- Related Tours Section -->
+    <div class="detail-related-tours-wrapper" id="related-tours-section">
+      <h2 class="related-heading">Tour tương tự bạn có thể thích</h2>
+      <div class="related-tours-grid-layout">
+        
+        <!-- Card 1: Lan Hạ -->
+        <article class="related-tour-card-box">
+          <div class="card-image-box">
+            <img src="assets/gallery_2.png" alt="Tour Vịnh Lan Hạ">
+            <div class="card-label-badge badge-best-seller">BÁN CHẠY</div>
+          </div>
+          <div class="card-details-box">
+            <span class="card-tag-category">LAN HẠ - 2 NGÀY 1 ĐÊM</span>
+            <h3 class="card-title-heading">Tour Vịnh Lan Ha - Du thuyền Orchid Premium</h3>
+            <div class="card-footer-row">
+              <div class="price-box">
+                <span class="prefix">Từ</span>
+                <span class="val">5.200.000đ</span>
+              </div>
+              <div class="rating-box">
+                <svg viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M6 10l-3.09 1.62.59-3.44L1 5.76l3.46-.5L6 2l1.54 3.26 3.46.5-2.5 2.42.59 3.44z"/>
+                </svg>
+                <span>4.9 (86)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Miền Tây -->
+        <article class="related-tour-card-box">
+          <div class="card-image-box">
+            <img src="assets/gallery_3.png" alt="Tour Miền Tây">
+          </div>
+          <div class="card-details-box">
+            <span class="card-tag-category">CẦN THƠ - 3 NGÀY 2 ĐÊM</span>
+            <h3 class="card-title-heading">Khám phá Miền Tây Sông Nước: Chợ Nổi Cái Răng</h3>
+            <div class="card-footer-row">
+              <div class="price-box">
+                <span class="prefix">Từ</span>
+                <span class="val">3.450.000đ</span>
+              </div>
+              <div class="rating-box">
+                <svg viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M6 10l-3.09 1.62.59-3.44L1 5.76l3.46-.5L6 2l1.54 3.26 3.46.5-2.5 2.42.59 3.44z"/>
+                </svg>
+                <span>4.7 (52)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Đà Lạt -->
+        <article class="related-tour-card-box">
+          <div class="card-image-box">
+            <img src="assets/gallery_4.png" alt="Tour Đà Lạt">
+          </div>
+          <div class="card-details-box">
+            <span class="card-tag-category">ĐÀ LẠT - 4 NGÀY 3 ĐÊM</span>
+            <h3 class="card-title-heading">Đà Lạt Mộng Mơ: Nghỉ dưỡng cao cấp Làng Pháp</h3>
+            <div class="card-footer-row">
+              <div class="price-box">
+                <span class="prefix">Từ</span>
+                <span class="val">6.100.000đ</span>
+              </div>
+              <div class="rating-box">
+                <svg viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M6 10l-3.09 1.62.59-3.44L1 5.76l3.46-.5L6 2l1.54 3.26 3.46.5-2.5 2.42.59 3.44z"/>
+                </svg>
+                <span>4.8 (110)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 3. FOOTER SECTION -->
+  <footer id="site-footer">
+    <div class="container-custom footer-top" id="footer-cols">
+      <!-- Col 1: Brand -->
+      <div class="footer-col" id="col-brand">
+        <div class="footer-logo-container" id="footer-logo-wrap">
+          <img src="assets/logo_white.svg" alt="Nét Việt Travel Logo White">
+        </div>
+        <p class="footer-desc">
+          Hành trình từ tâm, nâng tầm trải nghiệm Việt. Khám phá vẻ đẹp bất tận của mảnh đất chữ S cùng chúng tôi.
+        </p>
+        <div class="social-links" id="social-wrap">
+          <a href="#" aria-label="Instagram" id="social-instagram">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" id="social-facebook">
+            <svg viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter" id="social-twitter">
+            <svg viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Col 2: About -->
+      <div class="footer-col" id="col-about">
+        <h4>VỀ CÔNG TY</h4>
+        <ul class="footer-links-list" id="about-links">
+          <li><a href="#" id="link-story">Câu chuyện thương hiệu</a></li>
+          <li><a href="#" id="link-news">Tin tức & Sự kiện</a></li>
+          <li><a href="#" id="link-career">Cơ hội nghề nghiệp</a></li>
+          <li><a href="#" id="link-partners">Đối tác chiến lược</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 3: Support -->
+      <div class="footer-col" id="col-support">
+        <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+        <ul class="footer-links-list" id="support-links">
+          <li><a href="#" id="link-privacy">Chính sách bảo mật</a></li>
+          <li><a href="#" id="link-terms">Điều khoản sử dụng</a></li>
+          <li><a href="#" id="link-faq">Câu hỏi thường gặp</a></li>
+          <li><a href="#" id="link-hotline">Hotline 24/7</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 4: Contact -->
+      <div class="footer-col" id="col-contact">
+        <h4>LIÊN HỆ</h4>
+        <ul class="footer-contact-list" id="contact-details">
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+            <span id="contact-address">Trụ sở: Nét Việt, Q1, TP. Hồ Chí Minh</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+            <span id="contact-email">hellonetviet@gmail.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            <span class="phone-number" id="contact-phone">1990 888 999</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container-custom footer-bottom" id="footer-bottom-wrap">
+      <p id="footer-copyright">© 2026 Nét Việt.</p>
+      <div class="footer-bottom-links" id="bottom-links-wrap">
+        <a href="#" id="link-policy">Chính sách</a>
+        <a href="#" id="link-settings">Cài đặt</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

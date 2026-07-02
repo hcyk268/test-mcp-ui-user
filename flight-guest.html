@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt vé máy bay giá rẻ - Nét Việt Travel</title>
+  <meta name="description" content="Tìm kiếm và so sánh vé máy bay nội địa giá rẻ. Đặt vé máy bay trực tuyến Vietnam Airlines, VietJet, Bamboo dễ dàng.">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 1. HEADER SECTION -->
+  <header class="container-custom" id="site-header">
+    <div class="logo-container" id="logo-wrap">
+      <a href="index-guest.html" id="logo-link">
+        <img src="assets/logo.svg" alt="Nét Việt Travel Logo" id="logo-img">
+      </a>
+    </div>
+    
+    <nav id="main-nav">
+      <a href="index-guest.html" id="nav-home">Trang chủ</a>
+      <a href="tour-guest.html" id="nav-tours">Tour</a>
+      
+      <!-- Dropdown container wrapper for Đặt vé link -->
+      <div class="nav-dropdown-item" id="nav-dropdown-booking">
+        <a href="booking-guest.html" class="active" id="nav-booking">Đặt vé</a>
+        <!-- Submenu dropdown -->
+        <div class="booking-submenu" id="booking-dropdown-menu">
+          <a href="flight-guest.html" class="submenu-item active" id="sub-flight">
+            <!-- Airplane SVG Icon -->
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+            <span>Vé máy bay</span>
+          </a>
+          <div class="submenu-separator"></div>
+          <a href="booking-guest.html" class="submenu-item" id="sub-train">
+            <!-- Train SVG Icon -->
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2c-4 0-7 2.08-7 6v8c0 2.42 1.72 4.44 4 4.9V22h2v-1h2v1h2v-1.1c2.28-.46 4-2.48 4-4.9V8c0-3.92-3-6-7-6zm-3.5 14c-.83 0-1.5-.67-1.5-1.5S7.67 13 8.5 13s1.5.67 1.5 1.5S9.33 16 8.5 16zm7 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H7V7h10v3z"/>
+            </svg>
+            <span>Vé tàu</span>
+          </a>
+        </div>
+      </div>
+      
+      <a href="hotel-guest.html" id="nav-hotels">Khách sạn</a>
+    </nav>
+    
+    <div class="header-actions" id="header-actions-wrap">
+      <div class="header-icons" id="header-icons-wrap">
+        <button type="button" aria-label="Tìm kiếm" id="btn-icon-search">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Yêu thích" id="btn-icon-bookmarks">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Giỏ hàng" id="btn-icon-cart">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="guest-action-wrap" style="display: flex; align-items: center; gap: 16px; margin-left: 16px;">
+        <button type="button" aria-label="Thông báo" id="btn-icon-notifications" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;">
+          <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; color: #1b1c1c; fill: none; stroke: currentColor; stroke-width: 2;">
+            <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <a href="login.html" class="btn-guest-login" style="background-color: #c8102e; color: #ffffff; text-decoration: none; padding: 8px 24px; border-radius: 8px; font-weight: 700; font-size: 14px; letter-spacing: 0.7px; transition: var(--transition-smooth); display: inline-flex; align-items: center; justify-content: center; height: 39px; box-sizing: border-box;">Đăng nhập</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO BANNER -->
+  <section class="tour-banner-section booking-banner-override" id="booking-banner">
+    <div class="banner-overlay" id="banner-overlay"></div>
+    <div class="container-custom banner-container" id="banner-content">
+      <div class="banner-text-wrap" id="banner-titles">
+        <h1 id="banner-heading">Khám phá Việt Nam</h1>
+        <p class="booking-banner-sub" id="booking-banner-sub">
+          Hành trình vạn dặm, bắt đầu từ một bước chân cùng Nét Việt Travel.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. FLIGHT SEARCH WIDGET (Overlaps Banner Bottom) -->
+  <div class="booking-search-container container-custom" id="booking-search-bar">
+    <div class="booking-search-widget" id="booking-search-box">
+      <!-- Top Input Fields Grid -->
+      <div class="booking-search-fields" id="booking-search-fields">
+        <!-- Field 1: From -->
+        <div class="search-field" id="field-from">
+          <label id="lbl-from">TỪ</label>
+          <div class="search-input-wrap" id="wrap-from">
+            <!-- Red Airplane Icon -->
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+            <input type="text" value="Hà Nội (HAN)" id="val-from" aria-label="Ga đi">
+          </div>
+        </div>
+        <!-- Field 2: To -->
+        <div class="search-field" id="field-to">
+          <label id="lbl-to">ĐẾN</label>
+          <div class="search-input-wrap" id="wrap-to">
+            <!-- Red Airplane Icon -->
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+            <input type="text" value="TP. Hồ Chí Minh (SGN)" id="val-to" aria-label="Ga đến">
+          </div>
+        </div>
+        <!-- Field 3: Date -->
+        <div class="search-field" id="field-date">
+          <label id="lbl-date">NGÀY ĐI - VỀ</label>
+          <div class="search-input-wrap" id="wrap-date">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1-1h10a1 1 0 110 2H5a1 1 0 00-1 1v12a1 1 0 001 1h10a1 1 0 001-1V5a1 1 0 10-2 0v10H6V4zm11 3v2h-2V5h2zm-2 4h2V7h-2v2zm2 2h-2V9h2v2zm-2 2h2v-2h-2v2z" clip-rule="evenodd"/>
+            </svg>
+            <input type="text" value="12-10-2026" id="val-date" aria-label="Ngày đi ngày về">
+          </div>
+        </div>
+        <!-- Field 4: Passengers -->
+        <div class="search-field" id="field-passengers">
+          <label id="lbl-passengers">HÀNH KHÁCH</label>
+          <div class="search-input-wrap" id="wrap-passengers">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+            </svg>
+            <input type="text" value="1 Người lớn" id="val-passengers" aria-label="Số hành khách">
+          </div>
+        </div>
+      </div>
+      
+      <!-- Divider separating fields and actions -->
+      <hr class="booking-search-divider">
+      
+      <!-- Bottom Actions Row -->
+      <div class="booking-search-actions" id="booking-search-actions">
+        <div class="spacer-left"></div>
+        
+        <!-- Red Search Button (Centered) -->
+        <button type="submit" class="btn-booking-search" id="btn-search-tickets">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px; height:18px;">
+            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+          </svg>
+          <span>Tìm kiếm chuyến bay</span>
+        </button>
+        
+        <!-- Sort Dropdown (Right-aligned) -->
+        <div class="sort-widget" id="sort-widget">
+          <span id="lbl-sort">Sắp xếp:</span>
+          <div class="sort-select-dropdown" id="sort-select-dropdown">
+            <span id="val-sort">Giá rẻ nhất</span>
+            <svg viewBox="0 0 10 6">
+              <path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. MAIN CONTENT LAYOUT -->
+  <main class="container-custom main-content-wrap booking-layout-override" id="main-content-layout">
+    <!-- Aside Sidebar Filter -->
+    <aside class="sidebar-filter-card" id="sidebar-filter">
+      <div class="filter-header" id="filter-header-wrap">
+        <svg viewBox="0 0 18 12" id="icon-filter">
+          <path d="M0 1h18M2 6h14M5 11h8" stroke="#9e001f" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h2 id="heading-filter">Bộ lọc nâng cao</h2>
+      </div>
+      
+      <form action="#" method="GET" id="filter-form" onsubmit="event.preventDefault();">
+        <div class="filter-groups-container" id="filter-groups">
+          
+          <!-- Airlines Group -->
+          <div class="filter-group" id="group-airlines">
+            <h3 id="lbl-filter-airlines">Hãng hàng không</h3>
+            <div class="checkboxes-list" id="list-airlines-options">
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-air-vna">
+                <span class="checkmark"></span>
+                <span class="label-text">Vietnam Airlines</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-air-bamboo">
+                <span class="checkmark"></span>
+                <span class="label-text">Bamboo Airlines</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-air-sun">
+                <span class="checkmark"></span>
+                <span class="label-text">Sun PhuQuoc Airways</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-air-vietravel">
+                <span class="checkmark"></span>
+                <span class="label-text">Vietravel Airlines</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-air-vietjet">
+                <span class="checkmark"></span>
+                <span class="label-text">VietJet Air</span>
+              </label>
+            </div>
+          </div>
+          
+          <hr class="filter-separator">
+          
+          <!-- Departure Time Group -->
+          <div class="filter-group" id="group-departuretime">
+            <h3 id="lbl-filter-departuretime">Khung giờ bay</h3>
+            <div class="checkboxes-list" id="list-departuretime-options">
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-time-early">
+                <span class="checkmark"></span>
+                <span class="label-text">Sáng sớm (00:00-06:00)</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-time-morning">
+                <span class="checkmark"></span>
+                <span class="label-text">Buổi sáng (06:00-12:00)</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-time-afternoon">
+                <span class="checkmark"></span>
+                <span class="label-text">Buổi chiều (12:00-18:00)</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-time-evening">
+                <span class="checkmark"></span>
+                <span class="label-text">Buổi tối (18:00-24:00)</span>
+              </label>
+            </div>
+          </div>
+          
+          <hr class="filter-separator">
+
+          <!-- Stops Group -->
+          <div class="filter-group" id="group-stops">
+            <h3 id="lbl-filter-stops">Điểm dừng</h3>
+            <div class="checkboxes-list" id="list-stops-options">
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-stop-direct">
+                <span class="checkmark"></span>
+                <span class="label-text">Bay thẳng</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-stop-one">
+                <span class="checkmark"></span>
+                <span class="label-text">1 điểm dừng</span>
+              </label>
+            </div>
+          </div>
+          
+          <hr class="filter-separator">
+          
+          <!-- Price Group -->
+          <div class="filter-group" id="group-price">
+            <h3 id="lbl-filter-price">Mức giá</h3>
+            <div class="checkboxes-list" id="list-price-options">
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-price-1">
+                <span class="checkmark"></span>
+                <span class="label-text">Dưới 1 triệu</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-price-2">
+                <span class="checkmark"></span>
+                <span class="label-text">1 - 3 triệu</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-price-3">
+                <span class="checkmark"></span>
+                <span class="label-text">Trên 3 triệu</span>
+              </label>
+            </div>
+          </div>
+          
+        </div>
+        
+        <button type="submit" class="btn-apply-filters" id="btn-submit-filters">Áp dụng bộ lọc</button>
+      </form>
+    </aside>
+
+    <!-- Ticket Listing Grid Column -->
+    <section class="tour-listing-grid-col" id="tour-listing-grid">
+      <!-- Grid Header -->
+      <div class="listing-header" id="listing-header-wrap">
+        <div class="results-count" id="count-wrap">Hiển thị <strong>12</strong> kết quả phù hợp</div>
+      </div>
+      
+      <!-- Cards List Container -->
+      <div class="tour-cards-container-grid" id="tour-cards-grid">
+        
+        <!-- Card 1: Bamboo Airways QH-224 (Visual Card 1 in figma, priced at 1,020,000) -->
+        <article class="train-ticket-card flight-card-layout" id="card-flight-1">
+          <div class="train-card-left-border" id="border-flight-1"></div>
+          
+          <div class="flight-logo-wrapper" id="logo-wrap-flight-1">
+            <img src="assets/logo_bamboo.png" alt="Bamboo Airways Logo">
+          </div>
+          
+          <div class="train-card-main-content" id="main-flight-1">
+            <div class="train-badge-row" id="badge-flight-1">
+              <span class="train-type-text">Bamboo Airways</span>
+              <span class="train-code-heading">QH-224</span>
+            </div>
+            
+            <div class="train-schedule-timeline" id="sched-flight-1">
+              <div class="schedule-station start-station" id="start-flight-1">
+                <span class="station-time">08:15</span>
+                <span class="station-name">HAN · Hà Nội</span>
+              </div>
+              
+              <div class="schedule-duration-line" id="dur-line-flight-1">
+                <span class="duration-text">2h 10m (Bay thẳng)</span>
+                <div class="duration-progress-bar">
+                  <div class="progress-line"></div>
+                  <!-- Airplane icon in progress bar -->
+                  <div class="progress-bullet duration-plane-bullet">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="schedule-station end-station" id="end-flight-1">
+                <span class="station-time">10:25</span>
+                <span class="station-name">SGN · TP. Hồ Chí Minh</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="train-card-price-action-section" id="price-action-flight-1">
+            <div class="original-price" id="original-flight-1">1.450.000 đ</div>
+            <div class="train-price" id="price-flight-1">1.020.000 đ</div>
+            <button type="button" class="btn-select-train" id="btn-select-flight-1">Chọn chuyến</button>
+            <div class="seats-left-warning" id="warning-flight-1">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              <span>CHỈ CÒN 3 CHỖ</span>
+            </div>
+          </div>
+          
+          <div class="train-card-bg-vector" id="vector-flight-1">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Card 2: VietJet Air VJ-123 (Visual Card 2 in figma, priced at 890,000) -->
+        <article class="train-ticket-card flight-card-layout" id="card-flight-2">
+          <div class="train-card-left-border" id="border-flight-2"></div>
+          
+          <div class="flight-logo-wrapper" id="logo-wrap-flight-2">
+            <img src="assets/logo_vietjet.png" alt="VietJet Air Logo">
+          </div>
+          
+          <div class="train-card-main-content" id="main-flight-2">
+            <div class="train-badge-row" id="badge-flight-2">
+              <span class="train-type-text">VietJet Air</span>
+              <span class="train-code-heading">VJ-123</span>
+              <span class="ticket-benefit-badge green-benefit-badge">Giờ bay đẹp</span>
+            </div>
+            
+            <div class="train-schedule-timeline" id="sched-flight-2">
+              <div class="schedule-station start-station" id="start-flight-2">
+                <span class="station-time">13:10</span>
+                <span class="station-name">HAN · Hà Nội</span>
+              </div>
+              
+              <div class="schedule-duration-line" id="dur-line-flight-2">
+                <span class="duration-text">2h 15m (Bay thẳng)</span>
+                <div class="duration-progress-bar">
+                  <div class="progress-line"></div>
+                  <!-- Airplane icon in progress bar -->
+                  <div class="progress-bullet duration-plane-bullet">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="schedule-station end-station" id="end-flight-2">
+                <span class="station-time">15:25</span>
+                <span class="station-name">SGN · TP. Hồ Chí Minh</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="train-card-price-action-section" id="price-action-flight-2">
+            <div class="original-price" id="original-flight-2">1.250.000 đ</div>
+            <div class="train-price" id="price-flight-2">890.000 đ</div>
+            <button type="button" class="btn-select-train" id="btn-select-flight-2">Chọn chuyến</button>
+            <div class="seats-left-warning" id="warning-flight-2">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+              <span>CHỈ CÒN 5 CHỖ</span>
+            </div>
+          </div>
+          
+          <div class="train-card-bg-vector" id="vector-flight-2">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+          </div>
+        </article>
+
+        <!-- Card 3: Vietnam Airlines VN-201 (Visual Card 3 in figma, priced at 1,250,000) -->
+        <article class="train-ticket-card flight-card-layout" id="card-flight-3">
+          <div class="train-card-left-border" id="border-flight-3"></div>
+          
+          <div class="flight-logo-wrapper" id="logo-wrap-flight-3">
+            <a href="flight-detail-guest.html"><img src="assets/logo_vna.png" alt="Vietnam Airlines Logo"></a>
+          </div>
+          
+          <div class="train-card-main-content" id="main-flight-3">
+            <div class="train-badge-row" id="badge-flight-3">
+              <span class="train-type-text"><a href="flight-detail-guest.html" style="color: inherit; text-decoration: none;">Vietnam Airlines</a></span>
+              <span class="train-code-heading">VN-201</span>
+            </div>
+            
+            <div class="train-schedule-timeline" id="sched-flight-3">
+              <div class="schedule-station start-station" id="start-flight-3">
+                <span class="station-time">06:00</span>
+                <span class="station-name">HAN · Hà Nội</span>
+              </div>
+              
+              <div class="schedule-duration-line" id="dur-line-flight-3">
+                <span class="duration-text">2h 10m (Bay thẳng)</span>
+                <div class="duration-progress-bar">
+                  <div class="progress-line"></div>
+                  <!-- Airplane icon in progress bar -->
+                  <div class="progress-bullet duration-plane-bullet">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="schedule-station end-station" id="end-flight-3">
+                <span class="station-time">08:10</span>
+                <span class="station-name">SGN · TP. Hồ Chí Minh</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="train-card-price-action-section" id="price-action-flight-3">
+            <div class="original-price" id="original-flight-3">1.600.000 đ</div>
+            <div class="train-price" id="price-flight-3">1.250.000 đ</div>
+            <a href="flight-detail-guest.html" class="btn-select-train" id="btn-select-flight-3" style="text-decoration: none; text-align: center; display: inline-flex; align-items: center; justify-content: center; height: 40px; box-sizing: border-box;">Chọn chuyến</a>
+          </div>
+          
+          <div class="train-card-bg-vector" id="vector-flight-3">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+          </div>
+        </article>
+
+      </div>
+      
+      <!-- Pagination Widget -->
+      <div class="pagination-container" id="pagination-wrapper">
+        <button type="button" class="pag-btn" aria-label="Trang trước" id="pag-prev">
+          <svg viewBox="0 0 8 12">
+            <path d="M7 11L2 6l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="pag-btn active" id="pag-1">1</button>
+        <button type="button" class="pag-btn" id="pag-2">2</button>
+        <button type="button" class="pag-btn" id="pag-3">3</button>
+        <button type="button" class="pag-btn" aria-label="Trang sau" id="pag-next">
+          <svg viewBox="0 0 8 12">
+            <path d="M1 11l5-5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 5. FOOTER SECTION -->
+  <footer id="site-footer">
+    <div class="container-custom footer-top" id="footer-cols">
+      <!-- Col 1: Brand -->
+      <div class="footer-col" id="col-brand">
+        <div class="footer-logo-container" id="footer-logo-wrap">
+          <img src="assets/logo_white.svg" alt="Nét Việt Travel Logo White">
+        </div>
+        <p class="footer-desc">
+          Hành trình từ tâm, nâng tầm trải nghiệm Việt. Khám phá vẻ đẹp bất tận của mảnh đất chữ S cùng chúng tôi.
+        </p>
+        <div class="social-links" id="social-wrap">
+          <a href="#" aria-label="Instagram" id="social-instagram">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" id="social-facebook">
+            <svg viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter" id="social-twitter">
+            <svg viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Col 2: About -->
+      <div class="footer-col" id="col-about">
+        <h4>VỀ CÔNG TY</h4>
+        <ul class="footer-links-list" id="about-links">
+          <li><a href="#" id="link-story">Câu chuyện thương hiệu</a></li>
+          <li><a href="#" id="link-news">Tin tức & Sự kiện</a></li>
+          <li><a href="#" id="link-career">Cơ hội nghề nghiệp</a></li>
+          <li><a href="#" id="link-partners">Đối tác chiến lược</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 3: Support -->
+      <div class="footer-col" id="col-support">
+        <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+        <ul class="footer-links-list" id="support-links">
+          <li><a href="#" id="link-privacy">Chính sách bảo mật</a></li>
+          <li><a href="#" id="link-terms">Điều khoản sử dụng</a></li>
+          <li><a href="#" id="link-faq">Câu hỏi thường gặp</a></li>
+          <li><a href="#" id="link-hotline">Hotline 24/7</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 4: Contact -->
+      <div class="footer-col" id="col-contact">
+        <h4>LIÊN HỆ</h4>
+        <ul class="footer-contact-list" id="contact-details">
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            </svg>
+            <span id="contact-address">Trụ sở: Nét Việt, Q1, TP. Hồ Chí Minh</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            <span id="contact-email">hellonetviet@gmail.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            <span class="phone-number" id="contact-phone">1990 888 999</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container-custom footer-bottom" id="footer-bottom-wrap">
+      <p id="footer-copyright">© 2026 Nét Việt.</p>
+      <div class="footer-bottom-links" id="bottom-links-wrap">
+        <a href="#" id="link-policy">Chính sách</a>
+        <a href="#" id="link-settings">Cài đặt</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

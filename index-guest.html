@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nét Việt Travel - Hành trình di sản cao cấp</title>
+  <meta name="description" content="Nét Việt Travel kết nối tinh hoa văn hóa truyền thống Việt Nam với những trải nghiệm nghỉ dưỡng xa hoa nhất. Khám phá các địa danh du lịch thượng lưu hàng đầu.">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 1. HEADER SECTION -->
+  <header class="container-custom" id="site-header">
+    <div class="logo-container" id="logo-wrap">
+      <a href="index-guest.html" id="logo-link">
+        <img src="assets/logo.svg" alt="Nét Việt Travel Logo" id="logo-img">
+      </a>
+    </div>
+    
+    <nav id="main-nav">
+      <a href="index-guest.html" class="active" id="nav-home">Trang chủ</a>
+      <a href="tour-guest.html" id="nav-tours">Tour</a>
+      <div class="nav-dropdown-item" id="nav-dropdown-booking">
+        <a href="booking-guest.html" id="nav-booking">Đặt vé</a>
+        <div class="booking-submenu" id="booking-dropdown-menu">
+          <a href="flight-guest.html" class="submenu-item" id="sub-flight">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+            <span>Vé máy bay</span>
+          </a>
+          <div class="submenu-separator"></div>
+          <a href="booking-guest.html" class="submenu-item" id="sub-train">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2c-4 0-7 2.08-7 6v8c0 2.42 1.72 4.44 4 4.9V22h2v-1h2v1h2v-1.1c2.28-.46 4-2.48 4-4.9V8c0-3.92-3-6-7-6zm-3.5 14c-.83 0-1.5-.67-1.5-1.5S7.67 13 8.5 13s1.5.67 1.5 1.5S9.33 16 8.5 16zm7 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H7V7h10v3z"/>
+            </svg>
+            <span>Vé tàu</span>
+          </a>
+        </div>
+      </div>
+      <a href="hotel-guest.html" id="nav-hotels">Khách sạn</a>
+    </nav>
+    
+    <div class="header-actions" id="header-actions-wrap">
+      <div class="header-icons" id="header-icons-wrap">
+        <button type="button" aria-label="Tìm kiếm" id="btn-icon-search">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Yêu thích" id="btn-icon-bookmarks">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Giỏ hàng" id="btn-icon-cart">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="guest-action-wrap" style="display: flex; align-items: center; gap: 16px; margin-left: 16px;">
+        <button type="button" aria-label="Thông báo" id="btn-icon-notifications" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;">
+          <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; color: #1b1c1c; fill: none; stroke: currentColor; stroke-width: 2;">
+            <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <a href="login.html" class="btn-guest-login" style="background-color: #c8102e; color: #ffffff; text-decoration: none; padding: 8px 24px; border-radius: 8px; font-weight: 700; font-size: 14px; letter-spacing: 0.7px; transition: var(--transition-smooth); display: inline-flex; align-items: center; justify-content: center; height: 39px; box-sizing: border-box;">Đăng nhập</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <main>
+    <section class="hero-wrapper container-custom" id="hero-section">
+      <div class="hero-content-col" id="hero-content">
+        <h1 id="hero-heading">
+          <span class="kham-pha" id="heading-part1">Khám phá</span>
+          <span class="viet-nam" id="heading-part2">Việt Nam</span>
+        </h1>
+        <p class="hero-desc" id="hero-description">
+          Hành trình di sản cao cấp, kết nối tinh hoa văn hóa truyền thống với những trải nghiệm nghỉ dưỡng xa hoa nhất.
+        </p>
+        <a href="#search-section" class="btn-primary" id="btn-hero-cta">
+          <span>Bắt đầu hành trình</span>
+          <svg viewBox="0 0 16 12">
+            <path d="M1 6h14M10 1l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <div class="hero-image-col" id="hero-image-wrap">
+        <img src="assets/hero_bg.png" alt="Khám phá Việt Nam" id="hero-bg-img">
+      </div>
+    </section>
+
+    <!-- 3. SEARCH BOX WIDGET -->
+    <section class="search-section container-custom" id="search-section">
+      <div class="search-box-card" id="search-card">
+        <form action="#" method="GET" id="search-form" onsubmit="event.preventDefault();">
+          <div class="search-inputs-row" id="inputs-row">
+            <!-- Departure Field -->
+            <div class="search-field" id="field-departure">
+              <div class="label" id="lbl-departure">điểm khởi hành</div>
+              <div class="search-input-wrapper" id="wrap-departure">
+                <!-- Location Red Icon -->
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                <input type="text" value="TP. Hồ Chí Minh (SGN)" id="input-departure" aria-label="Điểm khởi hành">
+              </div>
+            </div>
+            
+            <!-- Arrival Field -->
+            <div class="search-field" id="field-arrival">
+              <div class="label" id="lbl-arrival">điểm đến</div>
+              <div class="search-input-wrapper" id="wrap-arrival">
+                <!-- Location Red Icon -->
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                </svg>
+                <input type="text" value="Hà Nội (HAN)" id="input-arrival" aria-label="Điểm đến">
+              </div>
+            </div>
+            
+            <!-- Date Field -->
+            <div class="search-field" id="field-date">
+              <div class="label" id="lbl-date">ngày đi - về</div>
+              <div class="search-input-wrapper" id="wrap-date">
+                <!-- Calendar Red Icon -->
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                </svg>
+                <input type="text" value="12 Th07 - 24 Th07" id="input-date" aria-label="Ngày đi ngày về">
+              </div>
+            </div>
+            
+            <!-- Search CTA Button -->
+            <button type="submit" class="btn-search" id="btn-submit-search">
+              <!-- White Search Icon -->
+              <svg viewBox="0 0 24 24">
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Tìm kiếm</span>
+            </button>
+          </div>
+          
+          <!-- Filters & Sorting Divider -->
+          <div class="filters-divider" id="filters-row">
+            <div class="filters-group" id="filters-wrap">
+              <span class="filter-label" id="lbl-filters">BỘ LỌC:</span>
+              <button type="button" class="filter-pill active" id="filter-airline">
+                <span>Hãng hàng không</span>
+                <svg viewBox="0 0 7 5">
+                  <path d="M0.5 1l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="filter-pill" id="filter-tours">
+                <span>Tour</span>
+                <svg viewBox="0 0 7 5">
+                  <path d="M0.5 1l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="filter-pill" id="filter-hotels">
+                <span>Khách sạn</span>
+                <svg viewBox="0 0 7 5">
+                  <path d="M0.5 1l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <button type="button" class="filter-pill" id="filter-trains">
+                <span>Vé tàu</span>
+                <svg viewBox="0 0 7 5">
+                  <path d="M0.5 1l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            
+            <div class="sort-group" id="sort-wrap">
+              <span class="sort-label" id="lbl-sort">Sắp xếp:</span>
+              <div class="sort-select-wrapper" id="select-sort">
+                <span id="current-sort-val">Giá rẻ nhất</span>
+                <svg viewBox="0 0 10 6">
+                  <path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 4. POPULAR DESTINATIONS -->
+    <section class="destinations-section container-custom" id="popular-destinations">
+      <div class="section-header" id="destinations-header">
+        <div class="star-icon" id="header-star">
+          <!-- Golden yellow flower/star icon -->
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
+          </svg>
+        </div>
+        <h2 id="heading-destinations">Điểm Đến Tuyệt Diệu</h2>
+        <p id="sub-destinations">Lựa chọn hàng đầu cho những tâm hồn xê dịch thượng lưu</p>
+      </div>
+      
+      <div class="destinations-grid" id="dest-grid-container">
+        <!-- Card 1: Đà Nẵng (Tall) -->
+        <a href="#" class="dest-card da-nang" id="card-danang">
+          <img src="assets/da_nang.jpg" alt="Đà Nẵng Destination">
+          <div class="dest-card-gradient"></div>
+          <div class="dest-card-info">
+            <span class="badge">HOT DESTINATION</span>
+            <h3>Đà Nẵng</h3>
+            <p>Thành phố của những cây cầu & bãi biển quyến rũ.</p>
+          </div>
+        </a>
+        
+        <!-- Card 2: Sapa -->
+        <a href="#" class="dest-card sapa" id="card-sapa">
+          <img src="assets/sapa.jpg" alt="Sapa Destination">
+          <div class="dest-card-gradient"></div>
+          <div class="dest-card-info">
+            <h3>Sapa</h3>
+            <p>Sương mù & Ruộng bậc thang.</p>
+          </div>
+        </a>
+        
+        <!-- Card 3: Ninh Bình -->
+        <a href="#" class="dest-card ninh-binh" id="card-ninhbinh">
+          <img src="assets/ninh_binh.jpg" alt="Ninh Bình Destination">
+          <div class="dest-card-gradient"></div>
+          <div class="dest-card-info">
+            <h3>Ninh Bình</h3>
+            <p>Hạ Long trên cạn.</p>
+          </div>
+        </a>
+        
+        <!-- Card 4: Phú Quốc (Wide) -->
+        <a href="#" class="dest-card phu-quoc" id="card-phuquoc">
+          <img src="assets/phu_quoc.jpg" alt="Phú Quốc Destination">
+          <div class="dest-card-gradient"></div>
+          <div class="dest-card-info">
+            <h3>Phú Quốc</h3>
+            <p>Thiên đường nghỉ dưỡng nhiệt đới.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 5. FLASH SALE SECTION -->
+    <section class="flashsale-section" id="flashsale-section">
+      <div class="container-custom flashsale-container" id="flash-container">
+        <div class="flashsale-header" id="flash-header">
+          <div class="flashsale-title-group" id="flash-titles">
+            <div class="badge-row" id="flash-badge-row">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+              </svg>
+              <span>ƯU ĐÃI GIỚI HẠN</span>
+            </div>
+            <h2>Flash Sale Mùa Hội Ngộ</h2>
+          </div>
+          
+          <div class="countdown-clock" id="countdown-wrap">
+            <div class="countdown-box" id="box-days">
+              <span class="num" id="days-val">02</span>
+              <span class="unit" id="days-unit">NGÀY</span>
+            </div>
+            <div class="countdown-box" id="box-hours">
+              <span class="num" id="hours-val">14</span>
+              <span class="unit" id="hours-unit">GIỜ</span>
+            </div>
+            <div class="countdown-box" id="box-mins">
+              <span class="num" id="mins-val">45</span>
+              <span class="unit" id="mins-unit">PHÚT</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="offers-grid" id="offers-grid-container">
+          <!-- Offer Card 1: Da Lat -->
+          <div class="offer-card" id="offer-dalat">
+            <div class="img-wrapper">
+              <img src="assets/da_lat_offer.jpg" alt="Heritage Hotel Da Lat">
+            </div>
+            <div class="discount-badge" id="off-dalat-badge">GIẢM 40%</div>
+            <h3>Heritage Hotel Da Lat</h3>
+            <p class="desc">Trải nghiệm không gian Đông Dương cổ điển giữa lòng Đà Lạt.</p>
+            <div class="offer-card-footer">
+              <div class="price-wrapper">
+                <span class="amount">2.450.000đ</span>
+                <span class="unit">/đêm</span>
+              </div>
+              <button type="button" class="btn-book" id="btn-book-dalat">Đặt Ngay</button>
+            </div>
+          </div>
+          
+          <!-- Offer Card 2: Amanoi -->
+          <div class="offer-card" id="offer-amanoi">
+            <div class="img-wrapper">
+              <img src="assets/amanoi_offer.jpg" alt="Amanoi Resort Nha Trang">
+            </div>
+            <div class="discount-badge" id="off-amanoi-badge">GIẢM 35%</div>
+            <h3>Amanoi Resort Nha Trang</h3>
+            <p class="desc">Đỉnh cao của sự riêng tư và sang trọng bậc nhất Việt Nam.</p>
+            <div class="offer-card-footer">
+              <div class="price-wrapper">
+                <span class="amount">12.200.000đ</span>
+                <span class="unit">/đêm</span>
+              </div>
+              <button type="button" class="btn-book" id="btn-book-amanoi">Đặt Ngay</button>
+            </div>
+          </div>
+          
+          <!-- Offer Card 3: Hoi An -->
+          <div class="offer-card" id="offer-hoian">
+            <div class="img-wrapper">
+              <img src="assets/hoi_an_offer.jpg" alt="Combo Gourmet Hoi An">
+            </div>
+            <div class="discount-badge" id="off-hoian-badge">GIẢM 25%</div>
+            <h3>Combo Gourmet Hoi An</h3>
+            <p class="desc">Thưởng thức tinh hoa ẩm thực phố Hội trên thuyền rồng.</p>
+            <div class="offer-card-footer">
+              <div class="price-wrapper">
+                <span class="amount">1.800.000đ</span>
+                <span class="unit">/khách</span>
+              </div>
+              <button type="button" class="btn-book" id="btn-book-hoian">Đặt Ngay</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. WHY CHOOSE US SECTION -->
+    <section class="why-section container-custom" id="why-choose-us">
+      <div class="why-container" id="why-container-wrap">
+        <!-- Image stack on the left -->
+        <div class="why-image-stack" id="why-stack-wrap">
+          <!-- Background outlines and offsets -->
+          <div class="circle-outline" id="stack-outline"></div>
+          <div class="yellow-offset-card" id="stack-offset"></div>
+          <div class="main-image-card" id="stack-main-img">
+            <img src="assets/why_choose_us.jpg" alt="Nét Việt Travel Services">
+          </div>
+        </div>
+        
+        <!-- Text details on the right -->
+        <div class="why-content-col" id="why-content-col">
+          <div class="tag-row" id="why-tag-row">
+            <div class="line"></div>
+            <span>GIÁ TRỊ CỐT LÕI</span>
+          </div>
+          <h2>Tại sao chọn Nét Việt Travel?</h2>
+          
+          <div class="features-list" id="features-wrap">
+            <!-- Feature 1: Quality -->
+            <div class="feature-item" id="feat-quality">
+              <div class="icon-circle" id="feat-quality-icon">
+                <!-- Star icon inside circle -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                </svg>
+              </div>
+              <div class="info" id="feat-quality-info">
+                <h3>Chất lượng 5 Sao</h3>
+                <p>Mọi dịch vụ từ khách sạn đến vận chuyển đều đạt tiêu chuẩn cao nhất.</p>
+              </div>
+            </div>
+            
+            <!-- Feature 2: Unique (Gold colored circle) -->
+            <div class="feature-item gold-theme" id="feat-experience">
+              <div class="icon-circle" id="feat-experience-icon">
+                <!-- Compass icon inside circle -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+              </div>
+              <div class="info" id="feat-experience-info">
+                <h3>Trải nghiệm độc bản</h3>
+                <p>Các hành trình được thiết kế riêng tư, mang đậm bản sắc văn hóa địa phương.</p>
+              </div>
+            </div>
+            
+            <!-- Feature 3: Support -->
+            <div class="feature-item" id="feat-support">
+              <div class="icon-circle" id="feat-support-icon">
+                <!-- Call/Support icon inside circle -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-2.2 2.2a15.045 15.045 0 01-6.59-6.59l2.2-2.21a.96.96 0 00.25-1A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.59c0-.55-.45-1-1-1z"/>
+                </svg>
+              </div>
+              <div class="info" id="feat-support-info">
+                <h3>Hỗ trợ 24/7</h3>
+                <p>Đội ngũ chuyên gia luôn sẵn sàng đồng hành cùng bạn trên mọi nẻo đường.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. FOOTER SECTION -->
+  <footer id="site-footer">
+    <div class="container-custom footer-top" id="footer-cols">
+      <!-- Col 1: Brand -->
+      <div class="footer-col" id="col-brand">
+        <div class="footer-logo-container" id="footer-logo-wrap">
+          <img src="assets/logo_white.svg" alt="Nét Việt Travel Logo White">
+        </div>
+        <p class="footer-desc">
+          Hành trình từ tâm, nâng tầm trải nghiệm Việt. Khám phá vẻ đẹp bất tận của mảnh đất chữ S cùng chúng tôi.
+        </p>
+        <div class="social-links" id="social-wrap">
+          <a href="#" aria-label="Instagram" id="social-instagram">
+            <!-- Instagram Icon -->
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" id="social-facebook">
+            <!-- Facebook Icon -->
+            <svg viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter" id="social-twitter">
+            <!-- Twitter/X Icon -->
+            <svg viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Col 2: About -->
+      <div class="footer-col" id="col-about">
+        <h4>VỀ CÔNG TY</h4>
+        <ul class="footer-links-list" id="about-links">
+          <li><a href="#" id="link-story">Câu chuyện thương hiệu</a></li>
+          <li><a href="#" id="link-news">Tin tức & Sự kiện</a></li>
+          <li><a href="#" id="link-career">Cơ hội nghề nghiệp</a></li>
+          <li><a href="#" id="link-partners">Đối tác chiến lược</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 3: Support -->
+      <div class="footer-col" id="col-support">
+        <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+        <ul class="footer-links-list" id="support-links">
+          <li><a href="#" id="link-privacy">Chính sách bảo mật</a></li>
+          <li><a href="#" id="link-terms">Điều khoản sử dụng</a></li>
+          <li><a href="#" id="link-faq">Câu hỏi thường gặp</a></li>
+          <li><a href="#" id="link-hotline">Hotline 24/7</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 4: Contact -->
+      <div class="footer-col" id="col-contact">
+        <h4>LIÊN HỆ</h4>
+        <ul class="footer-contact-list" id="contact-details">
+          <li>
+            <!-- Map marker -->
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            </svg>
+            <span id="contact-address">Trụ sở: Nét Việt, Q1, TP. Hồ Chí Minh</span>
+          </li>
+          <li>
+            <!-- Envelope -->
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            <span id="contact-email">hellonetviet@gmail.com</span>
+          </li>
+          <li>
+            <!-- Phone -->
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            <span class="phone-number" id="contact-phone">1990 888 999</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container-custom footer-bottom" id="footer-bottom-wrap">
+      <p id="footer-copyright">© 2026 Nét Việt.</p>
+      <div class="footer-bottom-links" id="bottom-links-wrap">
+        <a href="#" id="link-policy">Chính sách</a>
+        <a href="#" id="link-settings">Cài đặt</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

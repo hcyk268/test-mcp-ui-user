@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết vé tàu - Nét Việt Travel</title>
+  <meta name="description" content="Chi tiết đặt vé tàu Thống Nhất SE1 Hà Nội - Huế chất lượng cao tại Nét Việt Travel. Sơ đồ ghế ngồi trực quan, so sánh hạng ghế chi tiết.">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 1. HEADER SECTION -->
+  <header class="container-custom" id="site-header">
+    <div class="logo-container" id="logo-wrap">
+      <a href="index.html" id="logo-link">
+        <img src="assets/logo.svg" alt="Nét Việt Travel Logo" id="logo-img">
+      </a>
+    </div>
+    
+    <nav id="main-nav">
+      <a href="index.html" id="nav-home">Trang chủ</a>
+      <a href="tour.html" id="nav-tours">Tour</a>
+      
+      <!-- Dropdown container wrapper for Đặt vé link -->
+      <div class="nav-dropdown-item" id="nav-dropdown-booking">
+        <a href="booking.html" class="active" id="nav-booking">Đặt vé</a>
+        <!-- Submenu dropdown -->
+        <div class="booking-submenu" id="booking-dropdown-menu">
+          <a href="flight.html" class="submenu-item" id="sub-flight">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+            <span>Vé máy bay</span>
+          </a>
+          <div class="submenu-separator"></div>
+          <a href="booking.html" class="submenu-item active" id="sub-train">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2c-4 0-7 2.08-7 6v8c0 2.42 1.72 4.44 4 4.9V22h2v-1h2v1h2v-1.1c2.28-.46 4-2.48 4-4.9V8c0-3.92-3-6-7-6zm-3.5 14c-.83 0-1.5-.67-1.5-1.5S7.67 13 8.5 13s1.5.67 1.5 1.5S9.33 16 8.5 16zm7 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H7V7h10v3z"/>
+            </svg>
+            <span>Vé tàu</span>
+          </a>
+        </div>
+      </div>
+      
+      <a href="hotel.html" id="nav-hotels">Khách sạn</a>
+    </nav>
+    
+    <div class="header-actions" id="header-actions-wrap">
+      <div class="header-icons" id="header-icons-wrap">
+        <button type="button" aria-label="Tìm kiếm" id="btn-icon-search">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Yêu thích" id="btn-icon-bookmarks">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Giỏ hàng" id="btn-icon-cart">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="account-avatar" id="avatar-wrap">
+        <img src="assets/why_choose_us.jpg" alt="User Avatar" id="avatar-img" style="filter: brightness(1.1); transform: scale(1.5);">
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. MAIN LAYOUT -->
+  <main class="container-custom train-detail-layout" id="main-content">
+    
+    <!-- Train Route Summary Header Block -->
+    <div class="train-route-header-box" id="route-summary-box">
+      <div class="train-logo-title-wrap">
+        <div class="train-red-icon-box">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2c-4 0-7 2.08-7 6v8c0 2.42 1.72 4.44 4 4.9V22h2v-1h2v1h2v-1.1c2.28-.46 4-2.48 4-4.9V8c0-3.92-3-6-7-6zm-3.5 14c-.83 0-1.5-.67-1.5-1.5S7.67 13 8.5 13s1.5.67 1.5 1.5S9.33 16 8.5 16zm7 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H7V7h10v3z"/>
+          </svg>
+        </div>
+        <div class="train-details-text">
+          <h3>Tàu SE1 Tàu Thống Nhất</h3>
+          <span class="train-subtitle">Dịch vụ tốc hành Bắc-Nam • Khởi hành hàng ngày</span>
+        </div>
+      </div>
+      
+      <div class="train-times-progress-box">
+        <!-- Departure -->
+        <div class="station-time-card">
+          <span class="time">22:15</span>
+          <span class="station">Hà Nội (HAN)</span>
+        </div>
+        
+        <!-- Timeline Connector -->
+        <div class="station-timeline-middle">
+          <span class="dur-txt">12 giờ 45 phút</span>
+          <div class="timeline-bar">
+            <span class="connector-dot start-dot"></span>
+            <div class="connector-line"></div>
+            <span class="connector-dot end-dot"></span>
+          </div>
+          <span class="direct-txt">Chuyến đi trực tiếp</span>
+        </div>
+        
+        <!-- Arrival -->
+        <div class="station-time-card">
+          <span class="time">11:00 <small class="plus-day">(+1)</small></span>
+          <span class="station">Huế (HUE)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columns Container -->
+    <div class="train-columns-container">
+      
+      <!-- Left Column: Seat Map & Details -->
+      <section class="train-left-column">
+        
+        <!-- Coach tabs -->
+        <div class="coach-tabs-selection-row" id="coach-tabs-row">
+          <button type="button" class="coach-tab-btn active" data-coach="1">Toa 1: Nằm mềm (4)</button>
+          <button type="button" class="coach-tab-btn" data-coach="2">Toa 2: Nằm mềm (4)</button>
+          <button type="button" class="coach-tab-btn" data-coach="3">Toa 3: Nằm cứng (6)</button>
+          <button type="button" class="coach-tab-btn" data-coach="4">Toa 4: Ngồi mềm</button>
+        </div>
+
+        <!-- Seat Map Visualizer Card -->
+        <div class="train-seat-map-visualizer-card">
+          <div class="seat-map-header-row">
+            <h4>Sơ đồ Toa 1</h4>
+            <div class="seat-legend-row">
+              <div class="legend-item">
+                <span class="legend-box empty"></span>
+                <span>Trống</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-box booked"></span>
+                <span>Đã đặt</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-box selecting"></span>
+                <span>Đang chọn</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coach schematic body -->
+          <div class="train-carriage-schematic-box">
+            <div class="compartments-row-container">
+              
+              <!-- Compartment 1 -->
+              <div class="schematic-compartment" data-comp="1">
+                <span class="comp-label">Khoang 1</span>
+                <div class="beds-quad-grid">
+                  <!-- Bed 1 -->
+                  <div class="bed-item seat-empty" data-seat="01">
+                    <span class="bed-num">1</span>
+                  </div>
+                  <!-- Bed 2 -->
+                  <div class="bed-item seat-empty" data-seat="02">
+                    <span class="bed-num">2</span>
+                  </div>
+                  <!-- Bed 3 -->
+                  <div class="bed-item seat-booked">
+                    <span class="bed-num">3</span>
+                  </div>
+                  <!-- Bed 4 -->
+                  <div class="bed-item seat-selecting" data-seat="04">
+                    <span class="bed-num">4</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Compartment 2 -->
+              <div class="schematic-compartment" data-comp="2">
+                <span class="comp-label">Khoang 2</span>
+                <div class="beds-quad-grid">
+                  <div class="bed-item seat-booked">
+                    <span class="bed-num">5</span>
+                  </div>
+                  <div class="bed-item seat-booked">
+                    <span class="bed-num">6</span>
+                  </div>
+                  <div class="bed-item seat-empty" data-seat="07">
+                    <span class="bed-num">7</span>
+                  </div>
+                  <div class="bed-item seat-empty" data-seat="08">
+                    <span class="bed-num">8</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Compartment 3 -->
+              <div class="schematic-compartment" data-comp="3">
+                <span class="comp-label">Khoang 3</span>
+                <div class="beds-quad-grid">
+                  <div class="bed-item seat-empty" data-seat="09">
+                    <span class="bed-num">9</span>
+                  </div>
+                  <div class="bed-item seat-empty" data-seat="10">
+                    <span class="bed-num">10</span>
+                  </div>
+                  <div class="bed-item seat-empty" data-seat="11">
+                    <span class="bed-num">11</span>
+                  </div>
+                  <!-- Bed 12 locked/booked -->
+                  <div class="bed-item seat-locked">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Compartment 4 -->
+              <div class="schematic-compartment" data-comp="4">
+                <span class="comp-label">Khoang 4</span>
+                <div class="beds-quad-grid">
+                  <div class="bed-item seat-booked">
+                    <span class="bed-num">13</span>
+                  </div>
+                  <div class="bed-item seat-booked">
+                    <span class="bed-num">14</span>
+                  </div>
+                  <div class="bed-item seat-booked">
+                    <span class="bed-num">15</span>
+                  </div>
+                  <!-- Bed 16 locked/booked -->
+                  <div class="bed-item seat-locked">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            
+            <!-- Hallway -->
+            <div class="schematic-carriage-hallway">
+              <span>HÀNH LANG GIỮA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Class Comparisons (Bento Style) -->
+        <div class="train-class-comparison-bento">
+          <!-- Card 1: Nằm mềm -->
+          <div class="comparison-bento-card bg-light-red-tint">
+            <div class="card-title-row">
+              <h5>Nằm mềm</h5>
+              <span class="popular-pill">PHỔ BIẾN</span>
+            </div>
+            <ul class="comparison-benefits-list">
+              <li>
+                <svg viewBox="0 0 24 24" class="icon-check">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>4 giường mỗi khoang</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="icon-check">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Cung cấp đầy đủ chăn ga gối</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="icon-check">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Ổ cắm điện & Đèn đọc sách</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="icon-check">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>Nước khoáng miễn phí</span>
+              </li>
+            </ul>
+            <div class="card-price-row">
+              <span class="price-val">850,000</span>
+              <span class="currency">đ</span>
+            </div>
+          </div>
+
+          <!-- Card 2: Nằm cứng -->
+          <div class="comparison-bento-card border-grey-bg-white">
+            <div class="card-title-row">
+              <h5 class="color-dark">Nằm cứng</h5>
+            </div>
+            <ul class="comparison-benefits-list">
+              <li>
+                <svg viewBox="0 0 24 24" class="icon-check color-muted">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span class="color-muted">6 giường mỗi khoang</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="icon-check color-muted">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span class="color-muted">Chăn ga gối cơ bản</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="icon-check color-muted">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span class="color-muted">Sử dụng chung ổ cắm điện</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" class="icon-check color-muted">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span class="color-muted">Điều hòa điều chỉnh chung</span>
+              </li>
+            </ul>
+            <div class="card-price-row">
+              <span class="price-val color-dark">620,000</span>
+              <span class="currency color-dark">đ</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lịch trình chuyến đi -->
+        <div class="train-journey-timeline-card">
+          <h4>Lịch trình chuyến đi</h4>
+          <div class="journey-stops-list">
+            <div class="timeline-vertical-line"></div>
+            
+            <!-- Stop 1 -->
+            <div class="journey-stop-node">
+              <div class="node-circle active-red"></div>
+              <div class="node-content">
+                <div class="stop-name-desc">
+                  <h5>Ga Hà Nội (GA HAN)</h5>
+                  <span>Điểm khởi hành</span>
+                </div>
+                <span class="stop-time red-text">22:15</span>
+              </div>
+            </div>
+
+            <!-- Stop 2 -->
+            <div class="journey-stop-node">
+              <div class="node-circle pink-border"></div>
+              <div class="node-content">
+                <div class="stop-name-desc">
+                  <h5>Nam Định</h5>
+                  <span>Dừng ngắn • 5 phút</span>
+                </div>
+                <span class="stop-time">00:02</span>
+              </div>
+            </div>
+
+            <!-- Stop 3 -->
+            <div class="journey-stop-node">
+              <div class="node-circle pink-border"></div>
+              <div class="node-content">
+                <div class="stop-name-desc">
+                  <h5>Thanh Hóa</h5>
+                  <span>Dừng ngắn • 3 phút</span>
+                </div>
+                <span class="stop-time">01:45</span>
+              </div>
+            </div>
+
+            <!-- Stop 4 -->
+            <div class="journey-stop-node">
+              <div class="node-circle active-red"></div>
+              <div class="node-content">
+                <div class="stop-name-desc">
+                  <h5>Ga Huế (GA HUE)</h5>
+                  <span>Điểm đến</span>
+                </div>
+                <span class="stop-time red-text">11:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Right Column: Sidebar -->
+      <aside class="train-right-column">
+        
+        <!-- Sidebar Summary Box -->
+        <div class="train-booking-summary-sidebar-box">
+          <div class="summary-header">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+            </svg>
+            <h3>Tóm tắt đặt chỗ</h3>
+          </div>
+          <div class="summary-body">
+            
+            <div class="summary-row-item">
+              <span class="label">SE1 (Hà Nội - Huế)</span>
+              <span class="val bold" id="summary-seats-count">1 Chỗ</span>
+            </div>
+            
+            <div class="summary-row-item">
+              <span class="label" id="summary-seat-label">Toa 1 - Ghế 04</span>
+              <span class="val" id="summary-seat-price">850,000 đ</span>
+            </div>
+            
+            <div class="summary-row-item">
+              <span class="label">Phí dịch vụ</span>
+              <span class="val">15,000 đ</span>
+            </div>
+            
+            <!-- Total summary background block -->
+            <div class="summary-total-price-badge-block">
+              <span class="total-label">Tổng cộng</span>
+              <div class="total-val-wrap">
+                <span class="total-val-num" id="summary-total-price-num">865,000</span>
+                <span class="total-val-currency">đ</span>
+              </div>
+            </div>
+
+            <!-- Submit CTA -->
+            <button type="button" class="btn-train-payment-continue" id="btn-submit-payment">
+              <span>Tiến hành thanh toán</span>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+              </svg>
+            </button>
+            
+            <p class="summary-ssl-text">THANH TOÁN BẢO MẬT SSL 256-BIT</p>
+          </div>
+        </div>
+
+        <!-- Promo Card -->
+        <div class="train-sidebar-promo-card">
+          <div class="promo-glow-blur"></div>
+          <h4>Giảm giá thành viên</h4>
+          <p>Đăng nhập để tiết kiệm 10% cho tất cả các tuyến tàu nội địa trong hè này.</p>
+          <a href="#" class="promo-link-action">
+            <span>Tìm hiểu thêm</span>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Trust Signals Row -->
+        <div class="train-sidebar-trust-signals-row">
+          <div class="trust-signal-card">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            <span>Đối tác chính thức</span>
+          </div>
+          <div class="trust-signal-card">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/>
+            </svg>
+            <span>Hỗ trợ 24/7</span>
+          </div>
+        </div>
+
+        <!-- Back CTA outline -->
+        <a href="booking.html" class="btn-train-back-outline">Quay lại</a>
+
+      </aside>
+    </div>
+
+    <!-- Recommendations Section: Các tàu khác trên tuyến này -->
+    <div class="train-recommendations-section">
+      <h3>Các tàu khác trên tuyến này</h3>
+      <div class="train-recommendations-grid">
+        
+        <!-- Card 1 (SE3) -->
+        <article class="train-recommendation-card">
+          <div class="card-image-wrap">
+            <img src="assets/train_se3.png" alt="Tàu SE3">
+            <div class="card-image-code-overlay">SE3</div>
+          </div>
+          <div class="card-body-content">
+            <div class="card-header-row">
+              <span class="times">19:30 - 08:15</span>
+              <span class="duration">12 giờ 45 phút</span>
+            </div>
+            <p class="description">Thoải mái hơn, toa xe mới hơn</p>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="lbl">GIÁ TỪ</span>
+                <span class="val">920,000 đ</span>
+              </div>
+              <a href="#" class="btn-select-rec">Chọn</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 (SE5) -->
+        <article class="train-recommendation-card">
+          <div class="card-image-wrap">
+            <img src="assets/train_se5.png" alt="Tàu SE5">
+            <div class="card-image-code-overlay">SE5</div>
+          </div>
+          <div class="card-body-content">
+            <div class="card-header-row">
+              <span class="times">08:50 - 22:30</span>
+              <span class="duration">13 giờ 40 phút</span>
+            </div>
+            <p class="description">Tuyến đường cảnh quan ban ngày qua Hải Vân</p>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="lbl">GIÁ TỪ</span>
+                <span class="val">540,000 đ</span>
+              </div>
+              <a href="#" class="btn-select-rec">Chọn</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 (SE7) -->
+        <article class="train-recommendation-card">
+          <div class="card-image-wrap">
+            <img src="assets/train_se7.png" alt="Tàu SE7">
+            <div class="card-image-code-overlay">SE7</div>
+          </div>
+          <div class="card-body-content">
+            <div class="card-header-row">
+              <span class="times">06:00 - 19:45</span>
+              <span class="duration">13 giờ 45 phút</span>
+            </div>
+            <p class="description">Dịch vụ tốc hành tiết kiệm</p>
+            <div class="card-footer-row">
+              <div class="price-wrap">
+                <span class="lbl">GIÁ TỪ</span>
+                <span class="val">480,000 đ</span>
+              </div>
+              <a href="#" class="btn-select-rec">Chọn</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 3. FOOTER SECTION -->
+  <footer id="site-footer" style="margin-top: 64px;">
+    <div class="container-custom footer-top" id="footer-cols">
+      <div class="footer-col" id="footer-col-brand">
+        <div class="footer-logo-container">
+          <img src="assets/logo_white.svg" alt="Nét Việt Travel Logo White">
+        </div>
+        <p class="footer-desc">
+          Hành trình từ tâm, nâng tầm trải nghiệm Việt. Khám phá vẻ đẹp bất tận của mảnh đất chữ S cùng chúng tôi.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-col" id="col-about">
+        <h4>VỀ CÔNG TY</h4>
+        <ul class="footer-links-list">
+          <li><a href="#">Câu chuyện thương hiệu</a></li>
+          <li><a href="#">Tin tức &amp; Sự kiện</a></li>
+          <li><a href="#">Cơ hội nghề nghiệp</a></li>
+          <li><a href="#">Đối tác chiến lược</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col" id="col-support">
+        <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+        <ul class="footer-links-list">
+          <li><a href="#">Chính sách bảo mật</a></li>
+          <li><a href="#">Điều khoản sử dụng</a></li>
+          <li><a href="#">Câu hỏi thường gặp</a></li>
+          <li><a href="#">Hotline 24/7</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col" id="col-contact">
+        <h4>LIÊN HỆ</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            </svg>
+            <span>Trụ sở: Nét Việt, Q1, TP. Hồ Chí Minh</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            <span>hellonetviet@gmail.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            <span class="phone-number">1990 888 999</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container-custom footer-bottom" id="footer-bottom-wrap">
+      <p>© 2026 Nét Việt.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Chính sách</a>
+        <a href="#">Cài đặt</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive JavaScript for Seat Map & Selection -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const emptyBeds = document.querySelectorAll('.bed-item.seat-empty, .bed-item.seat-selecting');
+      const seatLabel = document.getElementById('summary-seat-label');
+      const seatPrice = document.getElementById('summary-seat-price');
+      const totalPriceNum = document.getElementById('summary-total-price-num');
+      const seatsCount = document.getElementById('summary-seats-count');
+      const submitPaymentBtn = document.getElementById('btn-submit-payment');
+
+      // Coach Tab Toggling
+      const coachTabs = document.querySelectorAll('.coach-tab-btn');
+      const schematicTitle = document.querySelector('.seat-map-header-row h4');
+
+      coachTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          coachTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const coachNum = tab.getAttribute('data-coach');
+          schematicTitle.textContent = `Sơ đồ Toa ${coachNum}`;
+        });
+      });
+
+      // Simple state to store selected seats
+      let selectedSeats = ['04']; // default active seat
+
+      function updateSidebar() {
+        if (selectedSeats.length === 0) {
+          seatLabel.textContent = 'Chưa chọn chỗ';
+          seatPrice.textContent = '0 đ';
+          totalPriceNum.textContent = '15,000'; // Service fee only
+          seatsCount.textContent = '0 Chỗ';
+          submitPaymentBtn.disabled = true;
+          submitPaymentBtn.style.opacity = '0.5';
+          submitPaymentBtn.style.cursor = 'not-allowed';
+        } else {
+          // Format list of seats: e.g., "Toa 1 - Ghế 04, 07"
+          const sorted = [...selectedSeats].sort();
+          const seatNames = sorted.map(num => `Ghế ${num}`).join(', ');
+          seatLabel.textContent = `Toa 1 - ${seatNames}`;
+          
+          const priceVal = sorted.length * 850000;
+          seatPrice.textContent = priceVal.toLocaleString('vi-VN') + ' đ';
+          
+          const totalVal = priceVal + 15000;
+          totalPriceNum.textContent = totalVal.toLocaleString('vi-VN');
+          
+          seatsCount.textContent = `${sorted.length} Chỗ`;
+          submitPaymentBtn.disabled = false;
+          submitPaymentBtn.style.opacity = '1';
+          submitPaymentBtn.style.cursor = 'pointer';
+        }
+      }
+
+      emptyBeds.forEach(bed => {
+        bed.addEventListener('click', () => {
+          const seatNum = bed.getAttribute('data-seat');
+          
+          if (bed.classList.contains('seat-selecting')) {
+            // Deselect
+            bed.classList.remove('seat-selecting');
+            bed.classList.add('seat-empty');
+            selectedSeats = selectedSeats.filter(s => s !== seatNum);
+          } else if (bed.classList.contains('seat-empty')) {
+            // Select
+            bed.classList.remove('seat-empty');
+            bed.classList.add('seat-selecting');
+            if (!selectedSeats.includes(seatNum)) {
+              selectedSeats.push(seatNum);
+            }
+          }
+          updateSidebar();
+        });
+      });
+
+      // Initialize
+      updateSidebar();
+    });
+  </script>
+</body>
+</html>

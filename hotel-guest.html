@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khách sạn nổi bật - Nét Việt Travel</title>
+  <meta name="description" content="Danh sách các khách sạn nghỉ dưỡng cao cấp từ Nét Việt Travel. Lọc theo số sao, mức giá, địa điểm để chọn phòng khách sạn tốt nhất cho chuyến đi của bạn.">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 1. HEADER SECTION -->
+  <header class="container-custom" id="site-header">
+    <div class="logo-container" id="logo-wrap">
+      <a href="index-guest.html" id="logo-link">
+        <img src="assets/logo.svg" alt="Nét Việt Travel Logo" id="logo-img">
+      </a>
+    </div>
+    
+    <nav id="main-nav">
+      <a href="index-guest.html" id="nav-home">Trang chủ</a>
+      <a href="tour-guest.html" id="nav-tours">Tour</a>
+      <div class="nav-dropdown-item" id="nav-dropdown-booking">
+        <a href="booking-guest.html" id="nav-booking">Đặt vé</a>
+        <div class="booking-submenu" id="booking-dropdown-menu">
+          <a href="flight-guest.html" class="submenu-item" id="sub-flight">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+            <span>Vé máy bay</span>
+          </a>
+          <div class="submenu-separator"></div>
+          <a href="booking-guest.html" class="submenu-item" id="sub-train">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2c-4 0-7 2.08-7 6v8c0 2.42 1.72 4.44 4 4.9V22h2v-1h2v1h2v-1.1c2.28-.46 4-2.48 4-4.9V8c0-3.92-3-6-7-6zm-3.5 14c-.83 0-1.5-.67-1.5-1.5S7.67 13 8.5 13s1.5.67 1.5 1.5S9.33 16 8.5 16zm7 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H7V7h10v3z"/>
+            </svg>
+            <span>Vé tàu</span>
+          </a>
+        </div>
+      </div>
+      <a href="hotel-guest.html" class="active" id="nav-hotels">Khách sạn</a>
+    </nav>
+    
+    <div class="header-actions" id="header-actions-wrap">
+      <div class="header-icons" id="header-icons-wrap">
+        <button type="button" aria-label="Tìm kiếm" id="btn-icon-search">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Yêu thích" id="btn-icon-bookmarks">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Giỏ hàng" id="btn-icon-cart">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      
+      <div class="guest-action-wrap" style="display: flex; align-items: center; gap: 16px; margin-left: 16px;">
+        <button type="button" aria-label="Thông báo" id="btn-icon-notifications" style="background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;">
+          <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; color: #1b1c1c; fill: none; stroke: currentColor; stroke-width: 2;">
+            <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <a href="login.html" class="btn-guest-login" style="background-color: #c8102e; color: #ffffff; text-decoration: none; padding: 8px 24px; border-radius: 8px; font-weight: 700; font-size: 14px; letter-spacing: 0.7px; transition: var(--transition-smooth); display: inline-flex; align-items: center; justify-content: center; height: 39px; box-sizing: border-box;">Đăng nhập</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. HERO BANNER & BREADCRUMB -->
+  <section class="tour-banner-section hotel-banner-override" id="tour-banner">
+    <div class="banner-overlay" id="banner-overlay"></div>
+    <div class="container-custom banner-container" id="banner-content">
+      <div class="banner-text-wrap" id="banner-titles">
+        <h1 id="banner-heading">Khách sạn</h1>
+        <div class="breadcrumb" id="tour-breadcrumb">
+          <a href="index-guest.html" id="bc-home">Trang chủ</a>
+          <span class="separator" id="bc-sep">&rsaquo;</span>
+          <span class="current" id="bc-current">Danh sách Khách sạn</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2B. HOTEL SEARCH WIDGET (Overlaps Banner Bottom) -->
+  <div class="hotel-search-widget-container container-custom" id="hotel-search-bar">
+    <div class="hotel-search-widget" id="hotel-search-box">
+      <div class="hotel-search-fields" id="hotel-search-fields">
+        <!-- Field 1: Destination -->
+        <div class="search-field" id="field-dest">
+          <label id="lbl-dest">Địa điểm</label>
+          <div class="search-input-wrap" id="wrap-dest">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            </svg>
+            <input type="text" value="TP. Hồ Chí Minh (SGN)" id="val-dest" aria-label="Địa điểm">
+          </div>
+        </div>
+        <!-- Field 2: Check-in Date -->
+        <div class="search-field" id="field-checkin">
+          <label id="lbl-checkin">Nhận phòng</label>
+          <div class="search-input-wrap" id="wrap-checkin">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1h10a1 1 0 110 2H5a1 1 0 00-1 1v12a1 1 0 001 1h10a1 1 0 001-1V5a1 1 0 10-2 0v10H6V4zm11 3v2h-2V5h2zm-2 4h2V7h-2v2zm2 2h-2V9h2v2zm-2 2h2v-2h-2v2z" clip-rule="evenodd"/>
+            </svg>
+            <input type="text" value="15-10-2026" id="val-checkin" aria-label="Ngày nhận phòng">
+          </div>
+        </div>
+        <!-- Field 3: Check-out Date -->
+        <div class="search-field" id="field-checkout">
+          <label id="lbl-checkout">Trả Phòng</label>
+          <div class="search-input-wrap" id="wrap-checkout">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1h10a1 1 0 110 2H5a1 1 0 00-1 1v12a1 1 0 001 1h10a1 1 0 001-1V5a1 1 0 10-2 0v10H6V4zm11 3v2h-2V5h2zm-2 4h2V7h-2v2zm2 2h-2V9h2v2zm-2 2h2v-2h-2v2z" clip-rule="evenodd"/>
+            </svg>
+            <input type="text" value="17-10-2026" id="val-checkout" aria-label="Ngày trả phòng">
+          </div>
+        </div>
+      </div>
+      
+      <button type="submit" class="btn-hotel-search" id="btn-search-hotels">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+          <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Tìm kiếm</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- 3. MAIN CONTENT LAYOUT -->
+  <main class="container-custom main-content-wrap hotel-layout-override" id="main-content-layout">
+    <!-- Aside Sidebar Filter -->
+    <aside class="sidebar-filter-card" id="sidebar-filter">
+      <div class="filter-header" id="filter-header-wrap">
+        <svg viewBox="0 0 18 12" id="icon-filter">
+          <path d="M0 1h18M2 6h14M5 11h8" stroke="#9e001f" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h2 id="heading-filter">Bộ lọc nâng cao</h2>
+      </div>
+      
+      <form action="#" method="GET" id="filter-form" onsubmit="event.preventDefault();">
+        <div class="filter-groups-container" id="filter-groups">
+          
+          <!-- Location Group -->
+          <div class="filter-group" id="group-location">
+            <h3 id="lbl-filter-location">Địa điểm</h3>
+            <div class="filter-search-box" id="search-box-location">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+              </svg>
+              <input type="text" placeholder="Tìm kiếm điểm đến..." id="input-filter-location" aria-label="Tìm kiếm điểm đến">
+            </div>
+          </div>
+          
+          <hr class="filter-separator">
+          
+          <!-- Price Group -->
+          <div class="filter-group" id="group-price">
+            <h3 id="lbl-filter-price">Mức giá</h3>
+            <div class="checkboxes-list" id="list-price-options">
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-price-1">
+                <span class="checkmark"></span>
+                <span class="label-text">Dưới 2 triệu</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-price-2">
+                <span class="checkmark"></span>
+                <span class="label-text">2 - 5 triệu</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-price-3">
+                <span class="checkmark"></span>
+                <span class="label-text">Trên 5 triệu</span>
+              </label>
+            </div>
+          </div>
+          
+          <hr class="filter-separator">
+          
+          <!-- Duration Group -->
+          <div class="filter-group" id="group-duration">
+            <h3 id="lbl-filter-duration">Thời gian</h3>
+            <div class="checkboxes-list" id="list-duration-options">
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-dur-1">
+                <span class="checkmark"></span>
+                <span class="label-text">1 - 3 ngày</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-dur-2">
+                <span class="checkmark"></span>
+                <span class="label-text">4 - 7 ngày</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-dur-3">
+                <span class="checkmark"></span>
+                <span class="label-text">Khác</span>
+              </label>
+            </div>
+          </div>
+          
+          <hr class="filter-separator">
+          
+          <!-- Star Rating Group (Specific to Hotel Page) -->
+          <div class="filter-group" id="group-stars">
+            <h3 id="lbl-filter-stars">Số sao khách sạn</h3>
+            <div class="checkboxes-list" id="list-stars-options">
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-star-5">
+                <span class="checkmark"></span>
+                <span class="label-text">5 sao</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-star-4">
+                <span class="checkmark"></span>
+                <span class="label-text">4 sao</span>
+              </label>
+              <label class="checkbox-container">
+                <input type="checkbox" id="chk-star-3">
+                <span class="checkmark"></span>
+                <span class="label-text">3 sao</span>
+              </label>
+            </div>
+          </div>
+          
+        </div>
+        
+        <button type="submit" class="btn-apply-filters" id="btn-submit-filters">Áp dụng bộ lọc</button>
+      </form>
+    </aside>
+
+    <!-- Hotel Listing Column -->
+    <section class="tour-listing-grid-col" id="tour-listing-grid">
+      <!-- Grid Header -->
+      <div class="listing-header" id="listing-header-wrap">
+        <h2 class="hotels-grid-heading" id="hotels-grid-heading">Khách sạn nổi bật</h2>
+        <div class="listing-sort-wrap" id="listing-sort-wrap">
+          <span id="lbl-listing-sort">Sắp xếp:</span>
+          <div class="listing-sort-select" id="listing-sort-select">
+            <span id="current-listing-sort">Đề xuất</span>
+            <svg viewBox="0 0 10 6">
+              <path d="M1 1l4 4 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cards List Container -->
+      <div class="tour-cards-container-grid" id="tour-cards-grid">
+        
+        <!-- Card 1: Golden Lotus Grand Da Nang -->
+        <article class="tour-list-card" id="card-hotel-1">
+          <div class="card-img-wrapper" id="img-hotel-1">
+            <img src="assets/hotel_card_1.jpg" alt="Golden Lotus Grand Da Nang">
+            <!-- Yellow Rating Badge -->
+            <div class="rating-badge" id="rate-hotel-1">
+              <svg viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 10l-3.09 1.62.59-3.44L1 5.76l3.46-.5L6 2l1.54 3.26 3.46.5-2.5 2.42.59 3.44z"/>
+              </svg>
+              <span>4.9 Đánh giá</span>
+            </div>
+            <!-- Bookmark Button -->
+            <button type="button" class="btn-wishlist" aria-label="Lưu Khách sạn" id="wish-hotel-1">
+              <svg viewBox="0 0 20 18" fill="currentColor">
+                <path d="M10 3.22l-.7-.68a5 5 0 00-7.08 0 5 5 0 000 7.07l7.78 7.78 7.78-7.78a5 5 0 000-7.07 5 5 0 00-7.08 0z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="card-content-wrapper" id="content-hotel-1">
+            <div class="hotel-address-row" id="address-hotel-1">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+              </svg>
+              <span>86 đường Lê Quang Đạo, Đà Nẵng, Việt Nam</span>
+            </div>
+            <h3 class="tour-title" id="title-hotel-1">Golden Lotus Grand Da Nang - Panoramic Rooftop Bar & Daily Afternoon Tea</h3>
+            
+            <div class="price-booking-divider" id="divider-hotel-1">
+              <div class="price-wrap" id="price-hotel-1">
+                <span class="original-price">2.900.000 đ</span>
+                <span class="discounted-price">2.300.000 đ</span>
+              </div>
+              <button type="button" class="btn-card-book" id="btn-book-hotel-1">Đặt ngay</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Vinpearl Resort & Spa Hạ Long -->
+        <article class="tour-list-card" id="card-hotel-2">
+          <div class="card-img-wrapper" id="img-hotel-2">
+            <a href="hotel-detail-guest.html"><img src="assets/hotel_gallery_1.png" alt="Vinpearl Resort & Spa Hạ Long" style="object-fit: cover; width: 100%; height: 100%;"></a>
+            <!-- Yellow Rating Badge -->
+            <div class="rating-badge" id="rate-hotel-2">
+              <svg viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 10l-3.09 1.62.59-3.44L1 5.76l3.46-.5L6 2l1.54 3.26 3.46.5-2.5 2.42.59 3.44z"/>
+              </svg>
+              <span>4.8 Đánh giá</span>
+            </div>
+            <!-- Bookmark Button -->
+            <button type="button" class="btn-wishlist" aria-label="Lưu Khách sạn" id="wish-hotel-2">
+              <svg viewBox="0 0 20 18" fill="currentColor">
+                <path d="M10 3.22l-.7-.68a5 5 0 00-7.08 0 5 5 0 000 7.07l7.78 7.78 7.78-7.78a5 5 0 000-7.07 5 5 0 00-7.08 0z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="card-content-wrapper" id="content-hotel-2">
+            <div class="hotel-address-row" id="address-hotel-2">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+              </svg>
+              <span>Đảo Rều, Phường Bãi Cháy, Thành phố Hạ Long, Quảng Ninh</span>
+            </div>
+            <h3 class="tour-title" id="title-hotel-2"><a href="hotel-detail-guest.html">Vinpearl Resort & Spa Hạ Long</a></h3>
+            
+            <div class="price-booking-divider" id="divider-hotel-2">
+              <div class="price-wrap" id="price-hotel-2">
+                <span class="original-price">4.200.000 đ</span>
+                <span class="discounted-price">3.500.000 đ</span>
+              </div>
+              <a href="hotel-detail-guest.html" class="btn-card-book" id="btn-book-hotel-2">Đặt ngay</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: La Cle' Đà Lạt -->
+        <article class="tour-list-card" id="card-hotel-3">
+          <div class="card-img-wrapper" id="img-hotel-3">
+            <img src="assets/hotel_card_3.jpg" alt="La Cle' Đà Lạt">
+            <div class="rating-badge" id="rate-hotel-3">
+              <svg viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 10l-3.09 1.62.59-3.44L1 5.76l3.46-.5L6 2l1.54 3.26 3.46.5-2.5 2.42.59 3.44z"/>
+              </svg>
+              <span>4.9 Đánh giá</span>
+            </div>
+          </div>
+          <div class="card-content-wrapper" id="content-hotel-3">
+            <div class="hotel-address-row" id="address-hotel-3">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+              </svg>
+              <span>3/9, đường 3 Tháng 4, Đà Lạt, Việt Nam</span>
+            </div>
+            <h3 class="tour-title" id="title-hotel-3">La Cle' Đà Lạt</h3>
+            
+            <div class="price-booking-divider" id="divider-hotel-3">
+              <div class="price-wrap" id="price-hotel-3">
+                <span class="original-price">2.750.000 đ</span>
+                <span class="discounted-price">2.150.000 đ</span>
+              </div>
+              <button type="button" class="btn-card-book" id="btn-book-hotel-3">Đặt ngay</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: CENTRAL PLAZA HOTEL - Mỹ Tho -->
+        <article class="tour-list-card" id="card-hotel-4">
+          <div class="card-img-wrapper" id="img-hotel-4">
+            <img src="assets/hotel_card_4.jpg" alt="CENTRAL PLAZA HOTEL - Mỹ Tho">
+            <div class="rating-badge" id="rate-hotel-4">
+              <svg viewBox="0 0 12 12" fill="currentColor">
+                <path d="M6 10l-3.09 1.62.59-3.44L1 5.76l3.46-.5L6 2l1.54 3.26 3.46.5-2.5 2.42.59 3.44z"/>
+              </svg>
+              <span>4.8 Đánh giá</span>
+            </div>
+          </div>
+          <div class="card-content-wrapper" id="content-hotel-4">
+            <div class="hotel-address-row" id="address-hotel-4">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+              </svg>
+              <span>15 đường 30 Tháng 4, Phường 1, Mỹ Tho, Tiền Giang, Việt Nam</span>
+            </div>
+            <h3 class="tour-title" id="title-hotel-4">CENTRAL PLAZA HOTEL - Mỹ Tho</h3>
+            
+            <div class="price-booking-divider" id="divider-hotel-4">
+              <div class="price-wrap" id="price-hotel-4">
+                <span class="original-price">2.050.000 đ</span>
+                <span class="discounted-price">1.450.000 đ</span>
+              </div>
+              <button type="button" class="btn-card-book" id="btn-book-hotel-4">Đặt ngay</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      
+      <!-- Pagination Widget -->
+      <div class="pagination-container" id="pagination-wrapper">
+        <button type="button" class="pag-btn" aria-label="Trang trước" id="pag-prev">
+          <svg viewBox="0 0 8 12">
+            <path d="M7 11L2 6l5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </button>
+        <button type="button" class="pag-btn active" id="pag-1">1</button>
+        <button type="button" class="pag-btn" id="pag-2">2</button>
+        <button type="button" class="pag-btn" id="pag-3">3</button>
+        <button type="button" class="pag-btn" aria-label="Trang sau" id="pag-next">
+          <svg viewBox="0 0 8 12">
+            <path d="M1 11l5-5-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- 4. FOOTER SECTION -->
+  <footer id="site-footer">
+    <div class="container-custom footer-top" id="footer-cols">
+      <!-- Col 1: Brand -->
+      <div class="footer-col" id="col-brand">
+        <div class="footer-logo-container" id="footer-logo-wrap">
+          <img src="assets/logo_white.svg" alt="Nét Việt Travel Logo White">
+        </div>
+        <p class="footer-desc">
+          Hành trình từ tâm, nâng tầm trải nghiệm Việt. Khám phá vẻ đẹp bất tận của mảnh đất chữ S cùng chúng tôi.
+        </p>
+        <div class="social-links" id="social-wrap">
+          <a href="#" aria-label="Instagram" id="social-instagram">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" id="social-facebook">
+            <svg viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter" id="social-twitter">
+            <svg viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Col 2: About -->
+      <div class="footer-col" id="col-about">
+        <h4>VỀ CÔNG TY</h4>
+        <ul class="footer-links-list" id="about-links">
+          <li><a href="#" id="link-story">Câu chuyện thương hiệu</a></li>
+          <li><a href="#" id="link-news">Tin tức & Sự kiện</a></li>
+          <li><a href="#" id="link-career">Cơ hội nghề nghiệp</a></li>
+          <li><a href="#" id="link-partners">Đối tác chiến lược</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 3: Support -->
+      <div class="footer-col" id="col-support">
+        <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+        <ul class="footer-links-list" id="support-links">
+          <li><a href="#" id="link-privacy">Chính sách bảo mật</a></li>
+          <li><a href="#" id="link-terms">Điều khoản sử dụng</a></li>
+          <li><a href="#" id="link-faq">Câu hỏi thường gặp</a></li>
+          <li><a href="#" id="link-hotline">Hotline 24/7</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 4: Contact -->
+      <div class="footer-col" id="col-contact">
+        <h4>LIÊN HỆ</h4>
+        <ul class="footer-contact-list" id="contact-details">
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+            </svg>
+            <span id="contact-address">Trụ sở: Nét Việt, Q1, TP. Hồ Chí Minh</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            <span id="contact-email">hellonetviet@gmail.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+            </svg>
+            <span class="phone-number" id="contact-phone">1990 888 999</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container-custom footer-bottom" id="footer-bottom-wrap">
+      <p id="footer-copyright">© 2026 Nét Việt.</p>
+      <div class="footer-bottom-links" id="bottom-links-wrap">
+        <a href="#" id="link-policy">Chính sách</a>
+        <a href="#" id="link-settings">Cài đặt</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

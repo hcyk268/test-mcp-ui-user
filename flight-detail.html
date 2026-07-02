@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chi tiết chuyến bay - Nét Việt Travel</title>
+  <meta name="description" content="Chi tiết chuyến bay Vietnam Airlines Hà Nội - TP. Hồ Chí Minh giá tốt nhất tại Nét Việt Travel.">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- 1. HEADER SECTION -->
+  <header class="container-custom" id="site-header">
+    <div class="logo-container" id="logo-wrap">
+      <a href="index.html" id="logo-link">
+        <img src="assets/logo.svg" alt="Nét Việt Travel Logo" id="logo-img">
+      </a>
+    </div>
+    
+    <nav id="main-nav">
+      <a href="index.html" id="nav-home">Trang chủ</a>
+      <a href="tour.html" id="nav-tours">Tour</a>
+      
+      <!-- Dropdown container wrapper for Đặt vé link -->
+      <div class="nav-dropdown-item" id="nav-dropdown-booking">
+        <a href="booking.html" class="active" id="nav-booking">Đặt vé</a>
+        <!-- Submenu dropdown -->
+        <div class="booking-submenu" id="booking-dropdown-menu">
+          <a href="flight.html" class="submenu-item active" id="sub-flight">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+            </svg>
+            <span>Vé máy bay</span>
+          </a>
+          <div class="submenu-separator"></div>
+          <a href="booking.html" class="submenu-item" id="sub-train">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2c-4 0-7 2.08-7 6v8c0 2.42 1.72 4.44 4 4.9V22h2v-1h2v1h2v-1.1c2.28-.46 4-2.48 4-4.9V8c0-3.92-3-6-7-6zm-3.5 14c-.83 0-1.5-.67-1.5-1.5S7.67 13 8.5 13s1.5.67 1.5 1.5S9.33 16 8.5 16zm7 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H7V7h10v3z"/>
+            </svg>
+            <span>Vé tàu</span>
+          </a>
+        </div>
+      </div>
+      
+      <a href="hotel.html" id="nav-hotels">Khách sạn</a>
+    </nav>
+    
+    <div class="header-actions" id="header-actions-wrap">
+      <div class="header-icons" id="header-icons-wrap">
+        <button type="button" aria-label="Tìm kiếm" id="btn-icon-search">
+          <svg viewBox="0 0 24 24">
+            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Yêu thích" id="btn-icon-bookmarks">
+          <svg viewBox="0 0 24 24">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button type="button" aria-label="Giỏ hàng" id="btn-icon-cart">
+          <svg viewBox="0 0 24 24">
+            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="account-avatar" id="avatar-wrap">
+        <img src="assets/why_choose_us.jpg" alt="User Avatar" id="avatar-img" style="filter: brightness(1.1); transform: scale(1.5);">
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. MAIN LAYOUT -->
+  <main class="container-custom flight-detail-layout" id="main-content">
+    
+    <div class="flight-columns-container">
+      
+      <!-- Left Column: Flight Info, Fare Grid, Details -->
+      <section class="flight-left-column">
+        
+        <!-- Flight Header Card -->
+        <div class="flight-header-card-box">
+          <div class="flight-card-top-row">
+            <div class="flight-card-airline-info">
+              <div class="vna-logo-container">
+                <img src="assets/flight_logo_vna_gold.png" alt="Vietnam Airlines Gold Logo">
+              </div>
+              <div class="airline-text-details">
+                <h3>Vietnam Airlines</h3>
+                <span class="flight-code-sub">VN213 <span class="bullet">•</span> Airbus A350-900</span>
+              </div>
+            </div>
+            <div class="flight-eco-friendly-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2L2 22h20L12 2z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Đội bay thân thiện môi trường</span>
+            </div>
+          </div>
+          
+          <div class="flight-path-visualization-row">
+            <!-- Departure -->
+            <div class="flight-station-node dep-node">
+              <span class="time">06:00</span>
+              <span class="airport-code">HAN</span>
+              <span class="city-name">Nội Bài</span>
+              <span class="terminal-badge">Nhà ga T1</span>
+            </div>
+            
+            <!-- Timeline Center Line -->
+            <div class="flight-duration-timeline-center">
+              <span class="duration-time-txt">2giờ 10phút</span>
+              <div class="progress-bar-vector-line">
+                <span class="dot hollow-dot"></span>
+                <span class="progress-line-path"></span>
+                <div class="airplane-icon-wrapper">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L14 19v-5.5L21 16z"/>
+                  </svg>
+                </div>
+                <span class="dot solid-dot"></span>
+              </div>
+              <span class="flight-type-italic">Bay thẳng</span>
+            </div>
+            
+            <!-- Arrival -->
+            <div class="flight-station-node arr-node">
+              <span class="time">08:10</span>
+              <span class="airport-code">SGN</span>
+              <span class="city-name">Tân Sơn Nhất</span>
+              <span class="terminal-badge">Nhà ga T2</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Fare Section -->
+        <div class="flight-fare-options-section">
+          <div class="fare-section-header">
+            <h2>Chọn Hạng Vé</h2>
+            <a href="#" class="fare-rules-link">Điều kiện giá vé</a>
+          </div>
+          
+          <div class="fare-cards-grid">
+            
+            <!-- Card 1: Economy Lite -->
+            <div class="fare-card-box border-grey">
+              <div class="fare-header-info">
+                <span class="class-title">PHỔ THÔNG TIẾT KIỆM</span>
+                <div class="price-value-box">
+                  <span class="price">1tr250</span>
+                  <span class="currency">đ</span>
+                </div>
+              </div>
+              <ul class="fare-benefits-list">
+                <li class="excluded">
+                  <svg class="icon-cross" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Không bao gồm hành lý ký gửi</span>
+                </li>
+                <li>
+                  <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>12kg Hành lý xách tay</span>
+                </li>
+                <li class="excluded">
+                  <svg class="icon-cross" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Không hoàn vé</span>
+                </li>
+                <li class="excluded">
+                  <svg class="icon-cross" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Không chọn chỗ trước</span>
+                </li>
+              </ul>
+              <button type="button" class="btn-fare-select outline-red-btn">Chọn</button>
+            </div>
+            
+            <!-- Card 2: Economy Classic (Active / Recommended Card) -->
+            <div class="fare-card-box active-red-card">
+              <div class="fare-popular-tag">PHỔ BIẾN NHẤT</div>
+              <div class="fare-header-info">
+                <span class="class-title">PHỔ THÔNG TIÊU CHUẨN</span>
+                <div class="price-value-box">
+                  <span class="price">1tr850</span>
+                  <span class="currency">đ</span>
+                </div>
+              </div>
+              <ul class="fare-benefits-list white-themes">
+                <li>
+                  <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>23kg Hành lý ký gửi</span>
+                </li>
+                <li>
+                  <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>12kg Hành lý xách tay</span>
+                </li>
+                <li>
+                  <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Thay đổi vé (Có phí)</span>
+                </li>
+                <li>
+                  <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Chọn chỗ tiêu chuẩn</span>
+                </li>
+                <li>
+                  <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Bao gồm suất ăn nóng</span>
+                </li>
+              </ul>
+              <button type="button" class="btn-fare-select solid-white-btn">Đã chọn</button>
+            </div>
+            
+            <!-- Card 3: Business -->
+            <div class="fare-card-box border-grey">
+              <div class="fare-header-info">
+                <span class="class-title">THƯƠNG GIA</span>
+                <div class="price-value-box">
+                  <span class="price">4tr200</span>
+                  <span class="currency">đ</span>
+                </div>
+              </div>
+              <ul class="fare-benefits-list">
+                <li>
+                  <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>40kg Hành lý ký gửi</span>
+                </li>
+                <li>
+                  <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Sử dụng Phòng chờ</span>
+                </li>
+                <li>
+                  <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Ưu tiên làm thủ tục</span>
+                </li>
+                <li>
+                  <svg class="icon-check" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                  <span>Ẩm thực cao cấp</span>
+                </li>
+              </ul>
+              <button type="button" class="btn-fare-select outline-red-btn">Chọn</button>
+            </div>
+            
+          </div>
+        </div>
+        
+        <!-- Flight Info and Utilities row -->
+        <div class="flight-details-bottom-grid">
+          
+          <!-- Box 1: Flight Info -->
+          <div class="flight-bottom-box">
+            <h4 class="bottom-box-title">
+              <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+              <span>Thông tin chuyến bay</span>
+            </h4>
+            <p class="bottom-box-desc">
+              Chuyến bay được khai thác bằng máy bay Airbus A350-900 hiện đại. Hành khách sẽ được tận hưởng khoang cabin rộng rãi, cửa sổ lớn hơn và hệ thống lọc không khí tiên tiến giúp giảm mệt mỏi.
+            </p>
+          </div>
+          
+          <!-- Box 2: Flight Utilities -->
+          <div class="flight-bottom-box">
+            <h4 class="bottom-box-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Tiện ích trên chuyến bay</span>
+            </h4>
+            <div class="flight-amenities-tags-grid">
+              <span class="amenity-tag-pill">WiFi trên máy bay</span>
+              <span class="amenity-tag-pill">Cổng sạc USB</span>
+              <span class="amenity-tag-pill">Phim ảnh</span>
+            </div>
+          </div>
+          
+        </div>
+        
+      </section>
+      
+      <!-- Right Column: Payment Sidebar Card & Assistance -->
+      <aside class="flight-right-column">
+        
+        <!-- Payment summary sidebar -->
+        <div class="payment-summary-sidebar-box">
+          <div class="payment-summary-header">
+            <h3>Tóm tắt thanh toán</h3>
+          </div>
+          <div class="payment-summary-body-rows">
+            <div class="summary-item-row">
+              <span class="lbl">Người lớn (x1)</span>
+              <span class="val">1.450.000 đ</span>
+            </div>
+            <div class="summary-item-row">
+              <span class="lbl">Thuế & Phí</span>
+              <span class="val">400.000 đ</span>
+            </div>
+            <div class="summary-item-row">
+              <span class="lbl">Dịch vụ bổ sung</span>
+              <span class="val">0 đ</span>
+            </div>
+            
+            <div class="summary-total-price-divider"></div>
+            
+            <div class="summary-item-row summary-total-price-row">
+              <span class="total-lbl">Tổng cộng</span>
+              <div class="total-val-box">
+                <span class="total-val">1.850.000</span>
+                <span class="total-currency">đ</span>
+              </div>
+            </div>
+            
+            <button type="submit" class="btn-payment-continue-submit">Tiếp tục nhập thông tin khách</button>
+            
+            <p class="payment-terms-warning">
+              Bằng cách tiếp tục, bạn đồng ý với Điều lệ vận chuyển và Điều kiện giá vé.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Help box -->
+        <div class="assistance-badge-box">
+          <div class="assistance-icon-avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="assistance-text-wrap">
+            <h4>Cần trợ giúp?</h4>
+            <span>Đội ngũ hỗ trợ 24/7 luôn sẵn sàng.</span>
+          </div>
+        </div>
+        
+        <!-- Back button -->
+        <a href="flight.html" class="btn-sidebar-back-outline">Quay lại</a>
+        
+      </aside>
+      
+    </div>
+
+    <!-- Custom Destination Banner at the Bottom -->
+    <div class="destination-hcm-showcase-banner">
+      <div class="showcase-banner-left-content">
+        <h2>Khám phá TP. Hồ Chí Minh</h2>
+        <p>
+          Được mệnh danh là Hòn ngọc Viễn Đông, Sài Gòn là sự hòa quyện giữa lịch sử, văn hóa và nhịp sống sôi động không ngừng nghỉ. Từ những công trình kiến trúc thời Pháp thuộc đến chợ Bến Thành tấp nập, mỗi góc phố đều kể một câu chuyện về quá khứ và tương lai của Việt Nam.
+        </p>
+        <div class="showcase-banner-meta-row">
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>29°C Nắng</span>
+          </div>
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 6v6l4 2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Múi giờ GMT +7</span>
+          </div>
+        </div>
+      </div>
+      <div class="showcase-banner-right-image">
+        <img src="assets/flight_hcm_skyline.png" alt="Thành phố Hồ Chí Minh Skyline">
+        <div class="banner-gradient-overlay"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 3. FOOTER SECTION -->
+  <footer id="site-footer">
+    <div class="container-custom footer-top" id="footer-cols">
+      <!-- Col 1: Brand -->
+      <div class="footer-col" id="col-brand">
+        <div class="footer-logo-container" id="footer-logo-wrap">
+          <img src="assets/logo_white.svg" alt="Nét Việt Travel Logo White">
+        </div>
+        <p class="footer-desc">
+          Hành trình từ tâm, nâng tầm trải nghiệm Việt. Khám phá vẻ đẹp bất tận của mảnh đất chữ S cùng chúng tôi.
+        </p>
+        <div class="social-links" id="social-wrap">
+          <a href="#" aria-label="Instagram" id="social-instagram">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook" id="social-facebook">
+            <svg viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Twitter" id="social-twitter">
+            <svg viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Col 2: About -->
+      <div class="footer-col" id="col-about">
+        <h4>VỀ CÔNG TY</h4>
+        <ul class="footer-links-list" id="about-links">
+          <li><a href="#" id="link-story">Câu chuyện thương hiệu</a></li>
+          <li><a href="#" id="link-news">Tin tức & Sự kiện</a></li>
+          <li><a href="#" id="link-career">Cơ hội nghề nghiệp</a></li>
+          <li><a href="#" id="link-partners">Đối tác chiến lược</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 3: Support -->
+      <div class="footer-col" id="col-support">
+        <h4>HỖ TRỢ KHÁCH HÀNG</h4>
+        <ul class="footer-links-list" id="support-links">
+          <li><a href="#" id="link-privacy">Chính sách bảo mật</a></li>
+          <li><a href="#" id="link-terms">Điều khoản sử dụng</a></li>
+          <li><a href="#" id="link-faq">Câu hỏi thường gặp</a></li>
+          <li><a href="#" id="link-hotline">Hotline 24/7</a></li>
+        </ul>
+      </div>
+      
+      <!-- Col 4: Contact -->
+      <div class="footer-col" id="col-contact">
+        <h4>LIÊN HỆ</h4>
+        <ul class="footer-contact-list" id="contact-details">
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+            <span id="contact-address">Trụ sở: Nét Việt, Q1, TP. Hồ Chí Minh</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+            <span id="contact-email">hellonetviet@gmail.com</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+            </svg>
+            <span id="contact-phone">1990 888 999</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom" id="footer-bottom-wrap">
+      <div class="container-custom footer-bottom-inner" id="footer-bottom-content">
+        <span class="copyright" id="footer-copy-text">© 2026 Nét Việt.</span>
+        <div class="footer-bottom-links" id="footer-bottom-links-wrap">
+          <a href="#" id="link-footer-privacy">Chính sách</a>
+          <a href="#" id="link-footer-settings">Cài đặt</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
